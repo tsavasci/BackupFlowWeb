@@ -1248,3 +1248,35 @@ h6 {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* QR Code Responsive Styles */
+@media (max-width: 768px) {
+    .qr-container {
+        margin-left: 0;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .qr-frame {
+        width: 80px;
+        height: 80px;
+    }
+
+    .qr-code {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-frame {
+        width: 70px;
+        height: 70px;
+    }
+
+    .qr-code {
+        width: 57px;
+        height: 57px;
+    }
+}
