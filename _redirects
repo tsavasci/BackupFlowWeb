@@ -1,10 +1,10 @@
 # Netlify redirects file for BackupFlow website
 
 # App Store redirects
-/app                    https://apps.apple.com/app/backupflow           302
-/download              https://apps.apple.com/app/backupflow           302
-/appstore              https://apps.apple.com/app/backupflow           302
-/ios                   https://apps.apple.com/app/backupflow           302
+/app                    https://apps.apple.com/us/app/backupflow/id6753620051            302
+/download              https://apps.apple.com/us/app/backupflow/id6753620051            302
+/appstore              https://apps.apple.com/us/app/backupflow/id6753620051            302
+/ios                   https://apps.apple.com/us/app/backupflow/id6753620051            302
 
 # Support redirects
 /support               mailto:tamersavasci@icloud.com                   302
@@ -13,9 +13,9 @@
 /email                 mailto:tamersavasci@icloud.com                   302
 
 # Social media redirects (when available)
-/twitter               https://twitter.com/backupflow                  302
+/twitter               https://twitter.com/tamersavasci                302
 /github                https://github.com/tsavasci/BackupFlow           302
-/linkedin              https://linkedin.com/company/backupflow          302
+/linkedin              https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322 302
 
 # Documentation redirects
 /docs                  /#features                                       302

@@ -41,12 +41,12 @@
 # Redirect rules
 [[redirects]]
   from = "/app"
-  to = "https://apps.apple.com/app/backupflow"
+  to = "https://apps.apple.com/us/app/backupflow/id6753620051"
   status = 302
 
 [[redirects]]
   from = "/download"
-  to = "https://apps.apple.com/app/backupflow"
+  to = "https://apps.apple.com/us/app/backupflow/id6753620051"
   status = 302
 
 [[redirects]]
@@ -54,11 +54,20 @@
   to = "mailto:tamersavasci@icloud.com"
   status = 302
 
-# Form handling (if contact form is added later)
 [[redirects]]
   from = "/contact"
-  to = "/.netlify/functions/contact"
-  status = 200
+  to = "mailto:tamersavasci@icloud.com"
+  status = 302
+
+[[redirects]]
+  from = "/twitter"
+  to = "https://twitter.com/tamersavasci"
+  status = 302
+
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/tsavasci/BackupFlow"
+  status = 302
 
 # 404 handling
 [[redirects]]

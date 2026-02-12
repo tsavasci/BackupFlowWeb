@@ -25,14 +25,12 @@
         />
         <meta
             property="og:description"
-            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 4,99 USD with unlimited backup tasks."
+            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 4.99 USD with unlimited backup tasks."
         />
         <meta
             property="og:image"
-            content="https://backupflow.netlify.app/favicon.svg"
+            content="https://backupflow.netlify.app/tasks.PNG"
         />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="BackupFlow" />
         <meta property="og:locale" content="en_US" />
 
@@ -48,11 +46,11 @@
         />
         <meta
             property="twitter:description"
-            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 4,99 USD with unlimited backup tasks."
+            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 4.99 USD with unlimited backup tasks."
         />
         <meta
             property="twitter:image"
-            content="https://backupflow.netlify.app/favicon.svg"
+            content="https://backupflow.netlify.app/tasks.PNG"
         />
         <meta property="twitter:creator" content="@tamersavasci" />
 
@@ -72,19 +70,40 @@
             rel="stylesheet"
         />
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="canonical" href="https://backupflow.netlify.app/" />
     </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to content</a>
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
                     <div class="logo-icon">
-                        <img src="web_logo.png" alt="BackupFlow Logo" class="logo-image" style="max-width: 100%; height: auto;">
+                        <img src="web_logo.png" alt="BackupFlow Logo" class="logo-image" />
                     </div>
                     <span class="logo-text">BackupFlow</span>
                 </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a class="nav-link" href="#features">Features</a>
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                    <a class="nav-link" href="#support">Support</a>
+                    <a class="nav-link download-btn" href="#download">Download</a>
+                </div>
+                <button
+                    type="button"
+                    class="nav-toggle"
+                    aria-label="Toggle navigation"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
 
+        <main id="main-content">
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-container">
@@ -109,7 +128,7 @@
                                     d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
                                 />
                             </svg>
-                            Only 4,99 USD
+                            Only $4.99
                         </a>
                         <a href="#features" class="btn btn-secondary"
                             >Learn More</a
@@ -260,6 +279,8 @@
                             src="tasks.PNG"
                             alt="BackupFlow Tasks Screen"
                             class="screenshot-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <h4>Task Management</h4>
                         <p>Manage your backup tasks with ease and precision</p>
@@ -270,6 +291,8 @@
                             src="new task.PNG"
                             alt="BackupFlow New Task Screen"
                             class="screenshot-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <h4>Create New Tasks</h4>
                         <p>Easily create and configure new backup tasks</p>
@@ -280,6 +303,8 @@
                             src="settings.PNG"
                             alt="BackupFlow Settings Screen"
                             class="screenshot-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <h4>Intelligent Settings</h4>
                         <p>
@@ -293,6 +318,8 @@
                             src="task detail.PNG"
                             alt="BackupFlow Task Detail Screen"
                             class="screenshot-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <h4>Task Details</h4>
                         <p>
@@ -305,6 +332,8 @@
                             src="geçmiş.PNG"
                             alt="BackupFlow History Screen"
                             class="screenshot-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <h4>Backup History</h4>
                         <p>Track your backup history and performance metrics</p>
@@ -315,6 +344,8 @@
                             src="hakıkında.PNG"
                             alt="BackupFlow About Screen"
                             class="screenshot-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <h4>About BackupFlow</h4>
                         <p>Learn more about the app and its features</p>
@@ -536,7 +567,7 @@
                         </div>
                         <h3>Documentation</h3>
                         <p>Comprehensive guides and tutorials</p>
-                        <a href="#" class="support-link">View Docs</a>
+                        <a href="/docs" class="support-link">View Docs</a>
                     </div>
 
                     <div class="support-card">
@@ -554,6 +585,7 @@
                 </div>
             </div>
         </section>
+        </main>
 
         <!-- Footer -->
         <footer class="footer">
@@ -562,32 +594,37 @@
                     <div class="footer-brand">
                         <div class="footer-logo">
                             <div class="logo-icon">
-                                <img src="web_logo.png" alt="BackupFlow Logo" class="logo-image" style="max-width: 100%; height: auto;">
+                                <img src="web_logo.png" alt="BackupFlow Logo" class="logo-image" />
                             </div>
                             <span class="logo-text">BackupFlow</span>
                         </div>
+                        <p class="footer-description">
+                            Professional iOS backup with local-first privacy and smart automation.
+                        </p>
+                    </div>
+                    <div class="footer-links">
                         <div class="footer-column">
                             <h4>Support</h4>
-                            <a href="#">Documentation</a>
+                            <a href="/docs">Documentation</a>
                             <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="mailto:tamersavasci@icloud.com">Contact</a>
                         </div>
                         <div class="footer-column">
                             <h4>Company</h4>
-                            <a href="#">About</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Careers</a>
+                            <a href="/about">About</a>
+                            <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="/github">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
                     <p>
-                        &copy; 2025 BackupFlow. All rights reserved. Made with
-                        ❤️ for iOS users.
+                        &copy; 2026 BackupFlow. All rights reserved.
                     </p>
                     <div class="footer-social">
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">GitHub</a>
-                        <a href="https://www.linkedin.com/in/tamer-savaşcı-85a832322" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="/twitter" class="social-link">Twitter</a>
+                        <a href="/github" class="social-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                 </div>
             </div>

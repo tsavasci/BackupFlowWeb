@@ -187,7 +187,7 @@
                             If you have any questions about this Privacy Policy or BackupFlow's privacy practices, please contact us:
                         </p>
                         <div class="contact-info">
-                            <p><strong>Email:</strong> support@backupflow.app</p>
+                            <p><strong>Email:</strong> tamersavasci@icloud.com</p>
                             <p><strong>Developer:</strong> Tamer Savaşcı</p>
                             <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
                         </div>
@@ -235,24 +235,73 @@
                         <div class="footer-column">
                             <h4>Support</h4>
                             <a href="index.html#support">Contact</a>
-                            <a href="#">Documentation</a>
+                            <a href="/docs">Documentation</a>
                             <a href="privacy-policy.html">Privacy Policy</a>
                         </div>
                         <div class="footer-column">
                             <h4>Company</h4>
-                            <a href="#">About</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Careers</a>
+                            <a href="/about">About</a>
+                            <a href="/github">GitHub</a>
+                            <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 BackupFlow. All rights reserved.</p>
+                    <p>&copy; 2026 BackupFlow. All rights reserved.</p>
                 </div>
             </div>
         </footer>
 
         <style>
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.96);
+                border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+                backdrop-filter: blur(14px);
+            }
+
+            .nav {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-brand a {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.65rem;
+                text-decoration: none;
+                color: #0f172a;
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 1.25rem;
+            }
+
+            .nav-links a {
+                color: #334155;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            .nav-links .cta-button {
+                padding: 0.6rem 1rem;
+                border-radius: 999px;
+                background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 50%, #8b5cf6 100%);
+                color: #fff;
+            }
+
             .privacy-policy {
                 padding: 120px 0 80px;
                 background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -360,6 +409,15 @@
             }
 
             @media (max-width: 768px) {
+                .nav {
+                    padding: 1rem;
+                }
+
+                .nav-links {
+                    gap: 0.75rem;
+                    font-size: 0.9rem;
+                }
+
                 .privacy-policy {
                     padding: 100px 0 60px;
                 }
