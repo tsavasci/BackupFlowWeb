@@ -25,7 +25,7 @@
         />
         <meta
             property="og:description"
-            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 4.99 USD with unlimited backup tasks."
+            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 0.99 USD with unlimited backup tasks."
         />
         <meta
             property="og:image"
@@ -46,7 +46,7 @@
         />
         <meta
             property="twitter:description"
-            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 4.99 USD with unlimited backup tasks."
+            content="Professional backup solution with FTP/WebDAV support, smart scheduling, and multi-language interface. Only 0.99 USD with unlimited backup tasks."
         />
         <meta
             property="twitter:image"
@@ -73,7 +73,7 @@
         <link rel="canonical" href="https://backupflow.netlify.app/" />
     </head>
     <body>
-        <a href="#main-content" class="skip-link">Skip to content</a>
+        <a href="#main-content" class="skip-link" data-i18n="misc.skipLink">Skip to content</a>
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
@@ -84,15 +84,33 @@
                     <span class="logo-text">BackupFlow</span>
                 </div>
                 <div class="nav-menu" id="nav-menu">
-                    <a class="nav-link" href="#features">Features</a>
-                    <a class="nav-link" href="#pricing">Pricing</a>
-                    <a class="nav-link" href="#support">Support</a>
-                    <a class="nav-link download-btn" href="#download">Download</a>
+                    <a class="nav-link" href="#features" data-i18n="nav.features">Features</a>
+                    <a class="nav-link" href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                    <a class="nav-link" href="#support" data-i18n="nav.support">Support</a>
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button
+                            type="button"
+                            class="lang-toggle"
+                            id="lang-toggle"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="lang-menu"
+                        >
+                            <span class="lang-flag" id="lang-current-flag">🇬🇧</span>
+                            <span class="lang-code" id="lang-current-code">EN</span>
+                            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Language"></ul>
+                    </div>
+                    <a class="nav-link download-btn" href="#download" data-i18n="nav.download">Download</a>
                 </div>
                 <button
                     type="button"
                     class="nav-toggle"
                     aria-label="Toggle navigation"
+                    data-i18n-attr="aria-label:misc.toggleNav"
                     aria-controls="nav-menu"
                     aria-expanded="false"
                 >
@@ -108,11 +126,11 @@
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-i18n-html="hero.title">
                         Professional Backup Solution for
                         <span class="gradient-text">iOS</span>
                     </h1>
-                    <p class="hero-subtitle">
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">
                         Secure, automated, and intelligent backup system with
                         FTP/WebDAV support, smart scheduling, and multi-language
                         interface. Your data protection made effortless.
@@ -128,24 +146,20 @@
                                     d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
                                 />
                             </svg>
-                            Only $4.99
+                            <span data-i18n="hero.btnPrimary">Only $0.99</span>
                         </a>
-                        <a href="#features" class="btn btn-secondary"
+                        <a href="#features" class="btn btn-secondary" data-i18n="hero.btnSecondary"
                             >Learn More</a
                         >
                     </div>
                     <div class="hero-badges">
                         <div class="badge">
-                            <span class="badge-icon">🛡️</span>
-                            <span>Military-grade Security</span>
-                        </div>
-                        <div class="badge">
                             <span class="badge-icon">🌍</span>
-                            <span>6 Languages</span>
+                            <span data-i18n="hero.badges.0">Multi-language Support</span>
                         </div>
                         <div class="badge">
                             <span class="badge-icon">⚡</span>
-                            <span>Smart Automation</span>
+                            <span data-i18n="hero.badges.1">Smart Automation</span>
                         </div>
                     </div>
                 </div>
@@ -163,8 +177,8 @@
         <section id="features" class="features">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Powerful Features</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" data-i18n="features.title">Powerful Features</h2>
+                    <p class="section-subtitle" data-i18n="features.subtitle">
                         Everything you need for comprehensive data protection
                     </p>
                 </div>
@@ -177,8 +191,8 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature-title">Smart Scheduling</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="features.items.0.title">Smart Scheduling</h3>
+                        <p class="feature-description" data-i18n="features.items.0.desc">
                             Intelligent backup scheduling with WiFi detection,
                             battery optimization, and background execution.
                         </p>
@@ -192,8 +206,8 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature-title">FTP & WebDAV Support</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="features.items.1.title">FTP & WebDAV Support</h3>
+                        <p class="feature-description" data-i18n="features.items.1.desc">
                             Professional server protocols with secure
                             connections, file synchronization, and remote
                             access.
@@ -208,8 +222,8 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature-title">Battery Intelligence</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="features.items.2.title">Battery Intelligence</h3>
+                        <p class="feature-description" data-i18n="features.items.2.desc">
                             Smart battery management with configurable
                             thresholds and charging state override
                             functionality.
@@ -224,10 +238,10 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature-title">Multi-Language</h3>
-                        <p class="feature-description">
-                            Complete localization support for Turkish, English,
-                            German, French, Chinese, and Japanese.
+                        <h3 class="feature-title" data-i18n="features.items.3.title">Multi-Language</h3>
+                        <p class="feature-description" data-i18n="features.items.3.desc">
+                            Complete localization across major world languages,
+                            in the app and on the web.
                         </p>
                     </div>
 
@@ -239,8 +253,8 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature-title">Real-time Dashboard</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="features.items.4.title">Real-time Dashboard</h3>
+                        <p class="feature-description" data-i18n="features.items.4.desc">
                             Live status monitoring with backup history, active
                             task tracking, and comprehensive analytics.
                         </p>
@@ -254,8 +268,8 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature-title">Background Execution</h3>
-                        <p class="feature-description">
+                        <h3 class="feature-title" data-i18n="features.items.5.title">Background Execution</h3>
+                        <p class="feature-description" data-i18n="features.items.5.desc">
                             Professional-grade background processing with
                             BGTaskScheduler integration and network management.
                         </p>
@@ -268,8 +282,8 @@
         <section class="screenshots">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Beautiful Interface</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" data-i18n="screenshots.title">Beautiful Interface</h2>
+                    <p class="section-subtitle" data-i18n="screenshots.subtitle">
                         Intuitive design meets powerful functionality
                     </p>
                 </div>
@@ -282,8 +296,8 @@
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4>Task Management</h4>
-                        <p>Manage your backup tasks with ease and precision</p>
+                        <h4 data-i18n="screenshots.items.0.title">Task Management</h4>
+                        <p data-i18n="screenshots.items.0.desc">Manage your backup tasks with ease and precision</p>
                     </div>
 
                     <div class="screenshot-card">
@@ -294,8 +308,8 @@
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4>Create New Tasks</h4>
-                        <p>Easily create and configure new backup tasks</p>
+                        <h4 data-i18n="screenshots.items.1.title">Create New Tasks</h4>
+                        <p data-i18n="screenshots.items.1.desc">Easily create and configure new backup tasks</p>
                     </div>
 
                     <div class="screenshot-card">
@@ -306,8 +320,8 @@
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4>Intelligent Settings</h4>
-                        <p>
+                        <h4 data-i18n="screenshots.items.2.title">Intelligent Settings</h4>
+                        <p data-i18n="screenshots.items.2.desc">
                             Configure smart automation and personalization
                             options
                         </p>
@@ -321,8 +335,8 @@
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4>Task Details</h4>
-                        <p>
+                        <h4 data-i18n="screenshots.items.3.title">Task Details</h4>
+                        <p data-i18n="screenshots.items.3.desc">
                             View detailed information and progress for each task
                         </p>
                     </div>
@@ -335,8 +349,8 @@
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4>Backup History</h4>
-                        <p>Track your backup history and performance metrics</p>
+                        <h4 data-i18n="screenshots.items.4.title">Backup History</h4>
+                        <p data-i18n="screenshots.items.4.desc">Track your backup history and performance metrics</p>
                     </div>
 
                     <div class="screenshot-card">
@@ -347,8 +361,8 @@
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4>About BackupFlow</h4>
-                        <p>Learn more about the app and its features</p>
+                        <h4 data-i18n="screenshots.items.5.title">About BackupFlow</h4>
+                        <p data-i18n="screenshots.items.5.desc">Learn more about the app and its features</p>
                     </div>
                 </div>
             </div>
@@ -358,18 +372,18 @@
         <section id="pricing" class="pricing">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Simple Pricing</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" data-i18n="pricing.title">Simple Pricing</h2>
+                    <p class="section-subtitle" data-i18n="pricing.subtitle">
                         Professional backup solution accessible to everyone
                     </p>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">BackupFlow</h3>
+                        <h3 class="pricing-title" data-i18n="pricing.planTitle">BackupFlow</h3>
                         <div class="pricing-price">
                             <span class="price-currency">$</span>
-                            <span class="price-amount">4.99</span>
-                            <span class="price-period">One-time purchase</span>
+                            <span class="price-amount">0.99</span>
+                            <span class="price-period" data-i18n="pricing.pricePeriod">One-time purchase</span>
                         </div>
                     </div>
                     <div class="pricing-features">
@@ -383,7 +397,7 @@
                                     d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
                                 />
                             </svg>
-                            <span>Unlimited backup tasks</span>
+                            <span data-i18n="pricing.items.0">Unlimited backup tasks</span>
                         </div>
                         <div class="feature-item">
                             <svg
@@ -395,7 +409,7 @@
                                     d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
                                 />
                             </svg>
-                            <span>FTP & WebDAV support</span>
+                            <span data-i18n="pricing.items.1">FTP & WebDAV support</span>
                         </div>
                         <div class="feature-item">
                             <svg
@@ -407,7 +421,7 @@
                                     d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
                                 />
                             </svg>
-                            <span>Smart scheduling & automation</span>
+                            <span data-i18n="pricing.items.2">Smart scheduling & automation</span>
                         </div>
                         <div class="feature-item">
                             <svg
@@ -419,7 +433,7 @@
                                     d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
                                 />
                             </svg>
-                            <span>6 language support</span>
+                            <span data-i18n="pricing.items.3">Multi-language support</span>
                         </div>
                         <div class="feature-item">
                             <svg
@@ -431,7 +445,7 @@
                                     d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
                                 />
                             </svg>
-                            <span>Background execution</span>
+                            <span data-i18n="pricing.items.4">Background execution</span>
                         </div>
                         <div class="feature-item">
                             <svg
@@ -443,14 +457,14 @@
                                     d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
                                 />
                             </svg>
-                            <span>Premium support</span>
+                            <span data-i18n="pricing.items.5">Premium support</span>
                         </div>
                     </div>
                     <div class="pricing-footer">
-                        <a href="#download" class="btn btn-primary btn-large"
+                        <a href="#download" class="btn btn-primary btn-large" data-i18n="pricing.btn"
                             >Download Now</a
                         >
-                        <p class="pricing-note">
+                        <p class="pricing-note" data-i18n="pricing.note">
                             No hidden fees • No subscriptions • No limits
                         </p>
                     </div>
@@ -463,10 +477,10 @@
             <div class="container">
                 <div class="download-content">
                     <div class="download-info">
-                        <h2 class="download-title">
+                        <h2 class="download-title" data-i18n="download.title">
                             Ready to Secure Your Data?
                         </h2>
-                        <p class="download-subtitle">
+                        <p class="download-subtitle" data-i18n="download.subtitle">
                             Join thousands of users who trust BackupFlow for
                             their data protection needs. Download now and
                             experience professional-grade backup automation.
@@ -476,6 +490,7 @@
                                 <img
                                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTMwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTMwIiBoZWlnaHQ9IjQwIiByeD0iNiIgZmlsbD0iYmxhY2siLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xOC43MSA4LjIxYzAtLjE3LS4wNS0uMzMtLjE0LS40N0wxMC4yNS4yMmMtLjI4LS4yOC0uNzgtLjI4LTEuMDYgMEwuNzggNy43NGMtLjA5LjE0LS4xNC4zLS4xNC40N3YxNS41OGMwIC4xNy4wNS4zMy4xNC40N2w4LjMxIDcuNTJjLjI4LjI4Ljc4LjI4IDEuMDYgMGw4LjMxLTcuNTJjLjA5LS4xNC4xNC0uMy4xNC0uNDdWOC4yMXoiLz4KPC9zdmc+Cjx0ZXh0IHg9IjM1IiB5PSIxNSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiPkRvd25sb2FkIG9uIHRoZTwvdGV4dD4KPHRleHQgeD0iMzUiIHk9IjI4IiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj5BcHAgU3RvcmU8L3RleHQ+Cjwvc3ZnPgo="
                                     alt="Download on the App Store"
+                                    data-i18n-attr="alt:download.appstoreAlt"
                                 />
                             </a>
                         </div>
@@ -534,8 +549,8 @@
         <section id="support" class="support">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Support & Contact</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" data-i18n="support.title">Support & Contact</h2>
+                    <p class="section-subtitle" data-i18n="support.subtitle">
                         We're here to help you succeed
                     </p>
                 </div>
@@ -548,8 +563,8 @@
                                 />
                             </svg>
                         </div>
-                        <h3>Email Support</h3>
-                        <p>Get direct assistance from our team</p>
+                        <h3 data-i18n="support.cards.0.title">Email Support</h3>
+                        <p data-i18n="support.cards.0.desc">Get direct assistance from our team</p>
                         <a
                             href="mailto:tamersavasci@icloud.com"
                             class="support-link"
@@ -565,9 +580,9 @@
                                 />
                             </svg>
                         </div>
-                        <h3>Documentation</h3>
-                        <p>Comprehensive guides and tutorials</p>
-                        <a href="/docs" class="support-link">View Docs</a>
+                        <h3 data-i18n="support.cards.1.title">Documentation</h3>
+                        <p data-i18n="support.cards.1.desc">Comprehensive guides and tutorials</p>
+                        <a href="/docs" class="support-link" data-i18n="support.cards.1.link">View Docs</a>
                     </div>
 
                     <div class="support-card">
@@ -578,9 +593,9 @@
                                 />
                             </svg>
                         </div>
-                        <h3>Rate & Review</h3>
-                        <p>Share your experience on the App Store</p>
-                        <a href="https://apps.apple.com/app/backupflow/id6753620051?action=write-review" class="support-link" target="_blank" rel="noopener noreferrer">Write Review</a>
+                        <h3 data-i18n="support.cards.2.title">Rate & Review</h3>
+                        <p data-i18n="support.cards.2.desc">Share your experience on the App Store</p>
+                        <a href="https://apps.apple.com/app/backupflow/id6753620051?action=write-review" class="support-link" target="_blank" rel="noopener noreferrer" data-i18n="support.cards.2.link">Write Review</a>
                     </div>
                 </div>
             </div>
@@ -598,38 +613,39 @@
                             </div>
                             <span class="logo-text">BackupFlow</span>
                         </div>
-                        <p class="footer-description">
+                        <p class="footer-description" data-i18n="footer.desc">
                             Professional iOS backup with local-first privacy and smart automation.
                         </p>
                     </div>
                     <div class="footer-links">
                         <div class="footer-column">
-                            <h4>Support</h4>
-                            <a href="/docs">Documentation</a>
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                            <a href="mailto:tamersavasci@icloud.com">Contact</a>
+                            <h4 data-i18n="footer.supportHeading">Support</h4>
+                            <a href="/docs" data-i18n="footer.docs">Documentation</a>
+                            <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                            <a href="mailto:tamersavasci@icloud.com" data-i18n="footer.contact">Contact</a>
                         </div>
                         <div class="footer-column">
-                            <h4>Company</h4>
-                            <a href="/about">About</a>
-                            <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a href="/github">GitHub</a>
+                            <h4 data-i18n="footer.companyHeading">Company</h4>
+                            <a href="/about" data-i18n="footer.about">About</a>
+                            <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkedin">LinkedIn</a>
+                            <a href="/github" data-i18n="footer.github">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
                     <p>
-                        &copy; 2026 BackupFlow. All rights reserved.
+                        &copy; 2026 BackupFlow. <span data-i18n="footer.copyright">All rights reserved.</span>
                     </p>
                     <div class="footer-social">
-                        <a href="/twitter" class="social-link">Twitter</a>
-                        <a href="/github" class="social-link">GitHub</a>
-                        <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="/twitter" class="social-link" data-i18n="footer.twitter">Twitter</a>
+                        <a href="/github" class="social-link" data-i18n="footer.github">GitHub</a>
+                        <a href="https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322" class="social-link" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkedin">LinkedIn</a>
                     </div>
                 </div>
             </div>
         </footer>
 
+        <script src="translations.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

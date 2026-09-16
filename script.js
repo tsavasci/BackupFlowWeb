@@ -13,7 +13,160 @@ function throttle(func, limit) {
   };
 }
 
+function resolveI18nValue(dict, path) {
+  return path
+    .split(".")
+    .reduce((acc, key) => (acc == null ? undefined : acc[key]), dict);
+}
+
+function initI18n() {
+  const languages = window.BF_LANGUAGES || [];
+  const translations = window.BF_TRANSLATIONS || {};
+  if (!languages.length || !Object.keys(translations).length) {
+    return;
+  }
+
+  const STORAGE_KEY = "bf_lang";
+  const codes = languages.map((l) => l.code);
+
+  const detectInitialLanguage = () => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && codes.includes(saved)) {
+        return saved;
+      }
+    } catch (e) {
+      /* localStorage unavailable */
+    }
+
+    const browserLangs = navigator.languages || [navigator.language || "en"];
+    for (const bl of browserLangs) {
+      const short = bl.slice(0, 2).toLowerCase();
+      if (codes.includes(short)) {
+        return short;
+      }
+    }
+    return "en";
+  };
+
+  const applyTranslations = (code) => {
+    const dict = translations[code] || translations.en;
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const value = resolveI18nValue(dict, el.getAttribute("data-i18n"));
+      if (typeof value === "string") {
+        el.textContent = value;
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const value = resolveI18nValue(dict, el.getAttribute("data-i18n-html"));
+      if (typeof value === "string") {
+        el.innerHTML = value.replace(
+          "{iOS}",
+          '<span class="gradient-text">iOS</span>',
+        );
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+      el.getAttribute("data-i18n-attr")
+        .split(";")
+        .forEach((pair) => {
+          const [attr, key] = pair.split(":").map((part) => part.trim());
+          if (!attr || !key) {
+            return;
+          }
+          const value = resolveI18nValue(dict, key);
+          if (typeof value === "string") {
+            el.setAttribute(attr, value);
+          }
+        });
+    });
+  };
+
+  const langToggle = document.getElementById("lang-toggle");
+  const langMenu = document.getElementById("lang-menu");
+  const langSwitcher = document.getElementById("lang-switcher");
+  const currentFlag = document.getElementById("lang-current-flag");
+  const currentCode = document.getElementById("lang-current-code");
+
+  const closeLangMenu = () => {
+    if (!langMenu || !langToggle) return;
+    langMenu.classList.remove("open");
+    langToggle.setAttribute("aria-expanded", "false");
+  };
+
+  const setLanguage = (code) => {
+    const meta = languages.find((l) => l.code === code) || languages[0];
+    document.documentElement.lang = meta.code;
+    document.documentElement.dir = meta.dir || "ltr";
+    applyTranslations(meta.code);
+
+    if (currentFlag) currentFlag.textContent = meta.flag;
+    if (currentCode) currentCode.textContent = meta.code.toUpperCase();
+
+    langMenu?.querySelectorAll("[data-lang-code]").forEach((btn) => {
+      const isActive = btn.getAttribute("data-lang-code") === meta.code;
+      btn.setAttribute("aria-selected", String(isActive));
+      btn.classList.toggle("active", isActive);
+    });
+
+    try {
+      localStorage.setItem(STORAGE_KEY, meta.code);
+    } catch (e) {
+      /* localStorage unavailable */
+    }
+  };
+
+  if (langMenu) {
+    languages.forEach((lang) => {
+      const li = document.createElement("li");
+      li.setAttribute("role", "presentation");
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.setAttribute("role", "option");
+      button.setAttribute("data-lang-code", lang.code);
+      button.className = "lang-option";
+      button.innerHTML = `<span class="lang-flag">${lang.flag}</span><span class="lang-name">${lang.name}</span>`;
+      button.addEventListener("click", () => {
+        setLanguage(lang.code);
+        closeLangMenu();
+        langToggle?.focus();
+      });
+
+      li.appendChild(button);
+      langMenu.appendChild(li);
+    });
+  }
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = langMenu.classList.toggle("open");
+      langToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (langSwitcher && !langSwitcher.contains(event.target)) {
+        closeLangMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeLangMenu();
+      }
+    });
+  }
+
+  setLanguage(detectInitialLanguage());
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initI18n();
+
   const navbar = document.querySelector(".navbar");
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
