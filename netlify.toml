@@ -51,12 +51,12 @@
 
 [[redirects]]
   from = "/support"
-  to = "mailto:tamersavasci@icloud.com"
+  to = "/#support"
   status = 302
 
 [[redirects]]
   from = "/contact"
-  to = "mailto:tamersavasci@icloud.com"
+  to = "/#support"
   status = 302
 
 [[redirects]]

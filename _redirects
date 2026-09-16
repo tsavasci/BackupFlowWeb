@@ -6,11 +6,12 @@
 /appstore              https://apps.apple.com/us/app/backupflow/id6753620051            302
 /ios                   https://apps.apple.com/us/app/backupflow/id6753620051            302
 
-# Support redirects
-/support               mailto:tamersavasci@icloud.com                   302
-/contact               mailto:tamersavasci@icloud.com                   302
-/help                  mailto:tamersavasci@icloud.com                   302
-/email                 mailto:tamersavasci@icloud.com                   302
+# Support redirects (mailto: targets are not supported by Netlify's
+# redirect engine, so these point to the on-page Support section instead)
+/support               /#support                                        302
+/contact               /#support                                        302
+/help                  /#support                                        302
+/email                 /#support                                        302
 
 # Social media redirects (when available)
 /twitter               https://twitter.com/tamersavasci                302
