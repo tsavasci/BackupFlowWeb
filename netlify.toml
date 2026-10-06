@@ -59,16 +59,6 @@
   to = "/#support"
   status = 302
 
-[[redirects]]
-  from = "/twitter"
-  to = "https://twitter.com/tamersavasci"
-  status = 302
-
-[[redirects]]
-  from = "/github"
-  to = "https://github.com/tsavasci/BackupFlow"
-  status = 302
-
 # 404 handling
 [[redirects]]
   from = "/*"

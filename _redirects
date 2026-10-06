@@ -13,11 +13,6 @@
 /help                  /#support                                        302
 /email                 /#support                                        302
 
-# Social media redirects (when available)
-/twitter               https://twitter.com/tamersavasci                302
-/github                https://github.com/tsavasci/BackupFlow           302
-/linkedin              https://www.linkedin.com/in/tamer-sava%C5%9Fc%C4%B1-85a832322 302
-
 # Documentation redirects
 /docs                  /#features                                       302
 /features              /#features                                       302

@@ -197,7 +197,6 @@ h6 {
 .nav-link:focus-visible,
 .btn:focus-visible,
 .support-link:focus-visible,
-.social-link:focus-visible,
 .footer-column a:focus-visible {
     outline: 2px solid #3b82f6;
     outline-offset: 3px;
@@ -1370,21 +1369,6 @@ h6 {
     padding-top: 2rem;
     border-top: 1px solid #2d3748;
     color: #a0aec0;
-}
-
-.footer-social {
-    display: flex;
-    gap: 2rem;
-}
-
-.social-link {
-    color: #a0aec0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: #00d4ff;
 }
 
 /* Responsive Design */
