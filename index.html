@@ -29,7 +29,7 @@
         />
         <meta
             property="og:image"
-            content="https://backupflow.netlify.app/tasks.PNG"
+            content="https://backupflow.netlify.app/assets/og-image.jpg"
         />
         <meta property="og:site_name" content="BackupFlow" />
         <meta property="og:locale" content="en_US" />
@@ -50,7 +50,7 @@
         />
         <meta
             property="twitter:image"
-            content="https://backupflow.netlify.app/tasks.PNG"
+            content="https://backupflow.netlify.app/assets/og-image.jpg"
         />
         <meta property="twitter:creator" content="@tamersavasci" />
 
@@ -164,10 +164,18 @@
                     </div>
                 </div>
                 <div class="hero-visual">
+                    <!-- Localized App Store banner; {lang} is replaced by script.js -->
                     <img
-                        src="tasks.PNG"
-                        alt="BackupFlow Tasks Interface"
-                        class="hero-screenshot"
+                        src="assets/banners/hero-en.jpg"
+                        srcset="assets/banners/hero-en-1200.jpg 1200w, assets/banners/hero-en.jpg 2400w"
+                        sizes="(max-width: 1240px) 100vw, 1200px"
+                        data-lang-src="assets/banners/hero-{lang}.jpg"
+                        data-lang-srcset="assets/banners/hero-{lang}-1200.jpg 1200w, assets/banners/hero-{lang}.jpg 2400w"
+                        width="2400"
+                        height="1029"
+                        alt="BackupFlow app screens: dashboard, FTP, SFTP and WebDAV backups, backup history"
+                        class="hero-banner"
+                        fetchpriority="high"
                     />
                 </div>
             </div>
@@ -288,82 +296,200 @@
                     </p>
                 </div>
                 <div class="screenshots-grid">
-                    <div class="screenshot-card">
-                        <img
-                            src="tasks.PNG"
-                            alt="BackupFlow Tasks Screen"
-                            class="screenshot-image"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <h4 data-i18n="screenshots.items.0.title">Task Management</h4>
-                        <p data-i18n="screenshots.items.0.desc">Manage your backup tasks with ease and precision</p>
-                    </div>
+                    <figure class="screenshot-card">
+                        <div class="device-frame">
+                            <img
+                                src="assets/screens/en/1.jpg"
+                                data-lang-src="assets/screens/{lang}/1.jpg"
+                                width="600"
+                                height="1298"
+                                alt="BackupFlow dashboard with backup health and saved servers"
+                                class="screenshot-image"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                        <figcaption>
+                            <h4 data-i18n="screenshots.items.0.title">Task Management</h4>
+                            <p data-i18n="screenshots.items.0.desc">Manage your backup tasks with ease and precision</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <div class="device-frame">
+                            <img
+                                src="assets/screens/en/6.jpg"
+                                data-lang-src="assets/screens/{lang}/6.jpg"
+                                width="600"
+                                height="1298"
+                                alt="Creating a new FTP backup task"
+                                class="screenshot-image"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                        <figcaption>
+                            <h4 data-i18n="screenshots.items.1.title">Create New Tasks</h4>
+                            <p data-i18n="screenshots.items.1.desc">Easily create and configure new backup tasks</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <div class="device-frame">
+                            <img
+                                src="assets/screens/en/9.jpg"
+                                data-lang-src="assets/screens/{lang}/9.jpg"
+                                width="600"
+                                height="1298"
+                                alt="Scheduling and backup behavior options"
+                                class="screenshot-image"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                        <figcaption>
+                            <h4 data-i18n="features.items.0.title">Smart Scheduling</h4>
+                            <p data-i18n="features.items.0.desc">Intelligent backup scheduling with WiFi detection, battery optimization, and background execution.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <div class="device-frame">
+                            <img
+                                src="assets/screens/en/3.jpg"
+                                data-lang-src="assets/screens/{lang}/3.jpg"
+                                width="600"
+                                height="1298"
+                                alt="Backup history with transfer statistics"
+                                class="screenshot-image"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                        <figcaption>
+                            <h4 data-i18n="screenshots.items.4.title">Backup History</h4>
+                            <p data-i18n="screenshots.items.4.desc">Track your backup history and performance metrics</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <div class="device-frame">
+                            <img
+                                src="assets/screens/en/5.jpg"
+                                data-lang-src="assets/screens/{lang}/5.jpg"
+                                width="600"
+                                height="1298"
+                                alt="Task details with server and schedule information"
+                                class="screenshot-image"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                        <figcaption>
+                            <h4 data-i18n="screenshots.items.3.title">Task Details</h4>
+                            <p data-i18n="screenshots.items.3.desc">View detailed information and progress for each task</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <div class="device-frame">
+                            <img
+                                src="assets/screens/en/10.jpg"
+                                data-lang-src="assets/screens/{lang}/10.jpg"
+                                width="600"
+                                height="1298"
+                                alt="Settings screen"
+                                class="screenshot-image"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                        <figcaption>
+                            <h4 data-i18n="screenshots.items.2.title">Intelligent Settings</h4>
+                            <p data-i18n="screenshots.items.2.desc">Configure smart automation and personalization options</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-                    <div class="screenshot-card">
+        <!-- Use Cases Section -->
+        <section id="use-cases" class="use-cases">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="useCases.title">Built for Your Setup</h2>
+                    <p class="section-subtitle" data-i18n="useCases.subtitle">
+                        Photos, NAS, personal cloud or fully automatic — BackupFlow fits the way you store your data
+                    </p>
+                </div>
+                <div class="use-cases-grid">
+                    <article class="use-case-card">
                         <img
-                            src="new task.PNG"
-                            alt="BackupFlow New Task Screen"
-                            class="screenshot-image"
+                            src="assets/usecases/1-en.jpg"
+                            data-lang-src="assets/usecases/1-{lang}.jpg"
+                            width="1200"
+                            height="675"
+                            alt=""
+                            class="use-case-image"
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4 data-i18n="screenshots.items.1.title">Create New Tasks</h4>
-                        <p data-i18n="screenshots.items.1.desc">Easily create and configure new backup tasks</p>
-                    </div>
-
-                    <div class="screenshot-card">
+                        <div class="use-case-body">
+                            <h3 class="use-case-title" data-i18n="useCases.items.0.title">Photo Backup</h3>
+                            <p class="use-case-description" data-i18n="useCases.items.0.desc">
+                                Back up iPhone photos and videos to your own server, no cloud subscription needed. Only new shots are transferred, and your storage stays under your control.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="use-case-card">
                         <img
-                            src="settings.PNG"
-                            alt="BackupFlow Settings Screen"
-                            class="screenshot-image"
+                            src="assets/usecases/2-en.jpg"
+                            data-lang-src="assets/usecases/2-{lang}.jpg"
+                            width="1200"
+                            height="675"
+                            alt=""
+                            class="use-case-image"
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4 data-i18n="screenshots.items.2.title">Intelligent Settings</h4>
-                        <p data-i18n="screenshots.items.2.desc">
-                            Configure smart automation and personalization
-                            options
-                        </p>
-                    </div>
-
-                    <div class="screenshot-card">
+                        <div class="use-case-body">
+                            <h3 class="use-case-title" data-i18n="useCases.items.1.title">NAS & SFTP</h3>
+                            <p class="use-case-description" data-i18n="useCases.items.1.desc">
+                                Back up photos and files straight to your NAS or home server over an encrypted SFTP connection. Set a schedule and let BackupFlow handle the rest.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="use-case-card">
                         <img
-                            src="task detail.PNG"
-                            alt="BackupFlow Task Detail Screen"
-                            class="screenshot-image"
+                            src="assets/usecases/3-en.jpg"
+                            data-lang-src="assets/usecases/3-{lang}.jpg"
+                            width="1200"
+                            height="675"
+                            alt=""
+                            class="use-case-image"
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4 data-i18n="screenshots.items.3.title">Task Details</h4>
-                        <p data-i18n="screenshots.items.3.desc">
-                            View detailed information and progress for each task
-                        </p>
-                    </div>
-
-                    <div class="screenshot-card">
+                        <div class="use-case-body">
+                            <h3 class="use-case-title" data-i18n="useCases.items.2.title">Personal Cloud (WebDAV)</h3>
+                            <p class="use-case-description" data-i18n="useCases.items.2.desc">
+                                Running your own cloud? BackupFlow automatically backs up photos and files to any WebDAV server, and uploads keep going in the background.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="use-case-card">
                         <img
-                            src="geçmiş.PNG"
-                            alt="BackupFlow History Screen"
-                            class="screenshot-image"
+                            src="assets/usecases/4-en.jpg"
+                            data-lang-src="assets/usecases/4-{lang}.jpg"
+                            width="1200"
+                            height="675"
+                            alt=""
+                            class="use-case-image"
                             loading="lazy"
                             decoding="async"
                         />
-                        <h4 data-i18n="screenshots.items.4.title">Backup History</h4>
-                        <p data-i18n="screenshots.items.4.desc">Track your backup history and performance metrics</p>
-                    </div>
-
-                    <div class="screenshot-card">
-                        <img
-                            src="hakıkında.PNG"
-                            alt="BackupFlow About Screen"
-                            class="screenshot-image"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <h4 data-i18n="screenshots.items.5.title">About BackupFlow</h4>
-                        <p data-i18n="screenshots.items.5.desc">Learn more about the app and its features</p>
-                    </div>
+                        <div class="use-case-body">
+                            <h3 class="use-case-title" data-i18n="useCases.items.3.title">Automatic Backup</h3>
+                            <p class="use-case-description" data-i18n="useCases.items.3.desc">
+                                Pick a schedule once and BackupFlow backs up every day, week or month. Limit backups to Wi-Fi, charging or a time window you choose.
+                            </p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>

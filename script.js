@@ -69,6 +69,15 @@ function initI18n() {
       }
     });
 
+    // Swap localized screenshots and banners: "{lang}" in the template becomes the language code.
+    document.querySelectorAll("[data-lang-src]").forEach((el) => {
+      const srcset = el.getAttribute("data-lang-srcset");
+      if (srcset) {
+        el.srcset = srcset.replaceAll("{lang}", code);
+      }
+      el.src = el.getAttribute("data-lang-src").replaceAll("{lang}", code);
+    });
+
     document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
       el.getAttribute("data-i18n-attr")
         .split(";")
@@ -220,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const animatedElements = document.querySelectorAll(
-    ".feature-card, .screenshot-card, .support-card",
+    ".feature-card, .screenshot-card, .use-case-card, .support-card",
   );
 
   if ("IntersectionObserver" in window && animatedElements.length > 0) {

@@ -48,6 +48,16 @@ window.BF_TRANSLATIONS = {
         { title: "About BackupFlow", desc: "Learn more about the app and its features" },
       ],
     },
+    useCases: {
+      title: "Built for Your Setup",
+      subtitle: "Photos, NAS, personal cloud or fully automatic — BackupFlow fits the way you store your data",
+      items: [
+        { title: "Photo Backup", desc: "Back up iPhone photos and videos to your own server, no cloud subscription needed. Only new shots are transferred, and your storage stays under your control." },
+        { title: "NAS & SFTP", desc: "Back up photos and files straight to your NAS or home server over an encrypted SFTP connection. Set a schedule and let BackupFlow handle the rest." },
+        { title: "Personal Cloud (WebDAV)", desc: "Running your own cloud? BackupFlow automatically backs up photos and files to any WebDAV server, and uploads keep going in the background." },
+        { title: "Automatic Backup", desc: "Pick a schedule once and BackupFlow backs up every day, week or month. Limit backups to Wi-Fi, charging or a time window you choose." },
+      ],
+    },
     pricing: {
       title: "Simple Pricing",
       subtitle: "Professional backup, accessible to everyone",
@@ -118,6 +128,16 @@ window.BF_TRANSLATIONS = {
         { title: "Görev Ayrıntıları", desc: "Her görev için ayrıntılı bilgi ve ilerlemeyi görüntüleyin" },
         { title: "Yedekleme Geçmişi", desc: "Yedekleme geçmişinizi ve performans metriklerinizi takip edin" },
         { title: "BackupFlow Hakkında", desc: "Uygulama ve özellikleri hakkında daha fazla bilgi edinin" },
+      ],
+    },
+    useCases: {
+      title: "Kurulumunuza Uygun",
+      subtitle: "Fotoğraflar, NAS, kişisel bulut ya da tamamen otomatik — BackupFlow verilerinizi saklama şeklinize uyum sağlar",
+      items: [
+        { title: "Fotoğraf Yedekleme", desc: "iPhone fotoğraf ve videolarınızı bulut aboneliği olmadan kendi sunucunuza yedekleyin. Yalnızca yeni çekimler aktarılır, depolama tamamen sizin kontrolünüzde." },
+        { title: "NAS & SFTP", desc: "Fotoğraf ve dosyalarınızı şifreli SFTP bağlantısıyla doğrudan NAS'ınıza ya da ev sunucunuza yedekleyin. Zamanlamayı ayarlayın, gerisini BackupFlow halletsin." },
+        { title: "Kişisel Bulut (WebDAV)", desc: "Kendi bulutunuzu mu kullanıyorsunuz? BackupFlow, fotoğraf ve dosyalarınızı WebDAV destekleyen her sunucuya otomatik yedekler; yükleme arka planda sürer." },
+        { title: "Otomatik Yedekleme", desc: "Zamanlamayı bir kez seçin; BackupFlow her gün, hafta ya da ay yedeğinizi alsın. Yedeklemeyi Wi-Fi, şarj veya belirlediğiniz saat aralığıyla sınırlayın." },
       ],
     },
     pricing: {
@@ -192,6 +212,16 @@ window.BF_TRANSLATIONS = {
         { title: "Über BackupFlow", desc: "Erfahren Sie mehr über die App und ihre Funktionen" },
       ],
     },
+    useCases: {
+      title: "Passend zu Ihrem Setup",
+      subtitle: "Fotos, NAS, eigene Cloud oder vollautomatisch – BackupFlow passt sich Ihrer Art der Datenspeicherung an",
+      items: [
+        { title: "Foto-Backup", desc: "Sichern Sie iPhone-Fotos und -Videos auf Ihrem eigenen Server – ganz ohne Cloud-Abo. Nur neue Aufnahmen werden übertragen, Ihr Speicher bleibt in Ihrer Hand." },
+        { title: "NAS & SFTP", desc: "Sichern Sie Fotos und Dateien über eine verschlüsselte SFTP-Verbindung direkt auf Ihr NAS oder Ihren Heimserver. Zeitplan festlegen – BackupFlow erledigt den Rest." },
+        { title: "Eigene Cloud (WebDAV)", desc: "Sie betreiben Ihre eigene Cloud? BackupFlow sichert Fotos und Dateien automatisch auf jeden WebDAV-Server – der Upload läuft im Hintergrund weiter." },
+        { title: "Automatisches Backup", desc: "Einmal einen Zeitplan wählen – BackupFlow sichert täglich, wöchentlich oder monatlich. Backups auf WLAN, Laden oder ein Zeitfenster Ihrer Wahl beschränken." },
+      ],
+    },
     pricing: {
       title: "Einfache Preisgestaltung",
       subtitle: "Professionelles Backup, für jeden erschwinglich",
@@ -262,6 +292,16 @@ window.BF_TRANSLATIONS = {
         { title: "Détails de la tâche", desc: "Consultez les informations détaillées et la progression de chaque tâche" },
         { title: "Historique des sauvegardes", desc: "Suivez l'historique de vos sauvegardes et vos indicateurs de performance" },
         { title: "À propos de BackupFlow", desc: "En savoir plus sur l'application et ses fonctionnalités" },
+      ],
+    },
+    useCases: {
+      title: "Adapté à votre installation",
+      subtitle: "Photos, NAS, cloud personnel ou entièrement automatique : BackupFlow s'adapte à votre façon de stocker vos données",
+      items: [
+        { title: "Sauvegarde de photos", desc: "Sauvegardez photos et vidéos de l'iPhone sur votre serveur, sans abonnement cloud. Seules les nouvelles prises sont envoyées ; vous gardez le contrôle du stockage." },
+        { title: "NAS et SFTP", desc: "Sauvegardez photos et fichiers directement sur votre NAS ou serveur domestique via une connexion SFTP chiffrée. Planifiez, BackupFlow s'occupe du reste." },
+        { title: "Cloud personnel (WebDAV)", desc: "Vous gérez votre propre cloud ? BackupFlow sauvegarde automatiquement photos et fichiers sur tout serveur WebDAV, et l'envoi se poursuit en arrière-plan." },
+        { title: "Sauvegarde automatique", desc: "Choisissez une fois un calendrier : BackupFlow sauvegarde chaque jour, semaine ou mois. Limitez les sauvegardes au Wi-Fi, à la recharge ou à une plage horaire." },
       ],
     },
     pricing: {
@@ -336,6 +376,16 @@ window.BF_TRANSLATIONS = {
         { title: "Acerca de BackupFlow", desc: "Obtén más información sobre la app y sus funciones" },
       ],
     },
+    useCases: {
+      title: "Hecho para tu configuración",
+      subtitle: "Fotos, NAS, nube personal o totalmente automático: BackupFlow se adapta a tu forma de guardar los datos",
+      items: [
+        { title: "Copia de fotos", desc: "Copia las fotos y vídeos del iPhone en tu propio servidor, sin suscripciones a la nube. Solo se transfieren las fotos nuevas y tú controlas el almacenamiento." },
+        { title: "NAS y SFTP", desc: "Copia fotos y archivos directamente en tu NAS o servidor doméstico mediante una conexión SFTP cifrada. Programa la copia y BackupFlow se encarga del resto." },
+        { title: "Nube personal (WebDAV)", desc: "¿Tienes tu propia nube? BackupFlow copia automáticamente fotos y archivos en cualquier servidor WebDAV, y la subida continúa en segundo plano." },
+        { title: "Copia automática", desc: "Elige un horario una vez y BackupFlow hará la copia cada día, semana o mes. Limita las copias al Wi-Fi, a la carga o a la franja horaria que elijas." },
+      ],
+    },
     pricing: {
       title: "Precios sencillos",
       subtitle: "Copia de seguridad profesional, accesible para todos",
@@ -406,6 +456,16 @@ window.BF_TRANSLATIONS = {
         { title: "Детали задачи", desc: "Просматривайте подробную информацию и ход выполнения каждой задачи" },
         { title: "История резервных копий", desc: "Отслеживайте историю и показатели производительности" },
         { title: "О BackupFlow", desc: "Узнайте больше о приложении и его функциях" },
+      ],
+    },
+    useCases: {
+      title: "Под вашу инфраструктуру",
+      subtitle: "Фото, NAS, личное облако или полная автоматизация — BackupFlow подстраивается под то, как вы храните данные",
+      items: [
+        { title: "Резервное копирование фото", desc: "Сохраняйте фото и видео с iPhone на своём сервере — без подписки на облако. Передаются только новые снимки, а хранилище полностью под вашим контролем." },
+        { title: "NAS и SFTP", desc: "Сохраняйте фото и файлы прямо на NAS или домашний сервер через зашифрованное SFTP-соединение. Задайте расписание — остальное сделает BackupFlow." },
+        { title: "Личное облако (WebDAV)", desc: "У вас своё облако? BackupFlow автоматически сохраняет фото и файлы на любой WebDAV-сервер, а загрузка продолжается в фоне." },
+        { title: "Автоматическое копирование", desc: "Задайте расписание один раз — BackupFlow будет делать копии каждый день, неделю или месяц. Ограничьте их Wi-Fi, зарядкой или удобным временем." },
       ],
     },
     pricing: {
@@ -480,6 +540,16 @@ window.BF_TRANSLATIONS = {
         { title: "حول BackupFlow", desc: "تعرّف على المزيد حول التطبيق وميزاته" },
       ],
     },
+    useCases: {
+      title: "مصمَّم ليناسب إعدادك",
+      subtitle: "الصور أو NAS أو السحابة الخاصة أو النسخ التلقائي بالكامل — يتكيّف BackupFlow مع طريقتك في تخزين بياناتك",
+      items: [
+        { title: "النسخ الاحتياطي للصور", desc: "انسخ صور ومقاطع فيديو iPhone احتياطيًا إلى خادمك الخاص دون اشتراك سحابي. تُنقل الصور الجديدة فقط، وتبقى مساحة التخزين تحت سيطرتك." },
+        { title: "NAS و SFTP", desc: "انسخ الصور والملفات احتياطيًا مباشرة إلى NAS أو خادمك المنزلي عبر اتصال SFTP مشفّر. حدّد موعدًا ودع BackupFlow يتولى الباقي." },
+        { title: "السحابة الخاصة (WebDAV)", desc: "هل لديك سحابتك الخاصة؟ ينسخ BackupFlow الصور والملفات احتياطيًا تلقائيًا إلى أي خادم WebDAV، ويستمر الرفع في الخلفية." },
+        { title: "النسخ الاحتياطي التلقائي", desc: "اختر جدولًا مرة واحدة، وسيأخذ BackupFlow نسخة احتياطية كل يوم أو أسبوع أو شهر. قيّد النسخ بشبكة Wi-Fi أو الشحن أو نطاق زمني تختاره." },
+      ],
+    },
     pricing: {
       title: "تسعير بسيط",
       subtitle: "نسخ احتياطي احترافي في متناول الجميع",
@@ -550,6 +620,16 @@ window.BF_TRANSLATIONS = {
         { title: "任务详情", desc: "查看每个任务的详细信息和进度" },
         { title: "备份历史", desc: "跟踪您的备份历史和性能指标" },
         { title: "关于 BackupFlow", desc: "了解更多关于该应用及其功能的信息" },
+      ],
+    },
+    useCases: {
+      title: "适配你的存储方案",
+      subtitle: "照片、NAS、私有云或全自动备份——BackupFlow 适应你存储数据的方式",
+      items: [
+        { title: "照片备份", desc: "无需订阅云服务，即可将 iPhone 照片和视频备份到你自己的服务器。只传输新拍摄的内容，存储空间完全由你掌控。" },
+        { title: "NAS 与 SFTP", desc: "通过加密的 SFTP 连接，将照片和文件直接备份到 NAS 或家庭服务器。设定好计划，其余交给 BackupFlow。" },
+        { title: "私有云 (WebDAV)", desc: "自建了私有云？BackupFlow 可将照片和文件自动备份到任何 WebDAV 服务器，上传在后台持续进行。" },
+        { title: "自动备份", desc: "只需设定一次计划，BackupFlow 就会每天、每周或每月自动备份。还可限定仅在 Wi-Fi、充电时或指定时段内进行。" },
       ],
     },
     pricing: {
@@ -624,6 +704,16 @@ window.BF_TRANSLATIONS = {
         { title: "BackupFlow 소개", desc: "앱과 그 기능에 대해 더 알아보세요" },
       ],
     },
+    useCases: {
+      title: "내 환경에 꼭 맞게",
+      subtitle: "사진, NAS, 개인 클라우드 또는 완전 자동 — BackupFlow는 데이터를 보관하는 방식에 맞춰집니다",
+      items: [
+        { title: "사진 백업", desc: "클라우드 구독 없이 iPhone 사진과 동영상을 내 서버에 백업하세요. 새로 찍은 사진만 전송되며, 저장 공간은 직접 관리할 수 있습니다." },
+        { title: "NAS 및 SFTP", desc: "암호화된 SFTP 연결로 사진과 파일을 NAS나 홈 서버에 바로 백업하세요. 일정만 정하면 나머지는 BackupFlow가 알아서 합니다." },
+        { title: "개인 클라우드 (WebDAV)", desc: "직접 클라우드를 운영하시나요? BackupFlow가 사진과 파일을 모든 WebDAV 서버에 자동으로 백업하며, 업로드는 백그라운드에서 계속됩니다." },
+        { title: "자동 백업", desc: "일정을 한 번만 정하면 BackupFlow가 매일, 매주 또는 매월 백업합니다. Wi-Fi, 충전 중 또는 원하는 시간대로 백업을 제한할 수 있습니다." },
+      ],
+    },
     pricing: {
       title: "간단한 가격",
       subtitle: "누구나 이용할 수 있는 전문 백업 솔루션",
@@ -694,6 +784,16 @@ window.BF_TRANSLATIONS = {
         { title: "タスクの詳細", desc: "各タスクの詳細情報と進行状況を確認" },
         { title: "バックアップ履歴", desc: "バックアップ履歴とパフォーマンス指標を追跡" },
         { title: "BackupFlow について", desc: "アプリとその機能について詳しく知る" },
+      ],
+    },
+    useCases: {
+      title: "あなたの環境に合わせて",
+      subtitle: "写真、NAS、プライベートクラウド、完全自動 — BackupFlowはデータの保存方法に合わせて使えます",
+      items: [
+        { title: "写真バックアップ", desc: "クラウドの契約なしで、iPhoneの写真やビデオを自分のサーバーにバックアップ。転送されるのは新しい写真だけ。保存先は自分で管理できます。" },
+        { title: "NASとSFTP", desc: "暗号化されたSFTP接続で、写真やファイルをNASや自宅サーバーへ直接バックアップ。スケジュールを設定すれば、あとはBackupFlowにおまかせ。" },
+        { title: "プライベートクラウド (WebDAV)", desc: "自分のクラウドを運用中なら、BackupFlowが写真やファイルをWebDAV対応サーバーへ自動バックアップ。アップロードはバックグラウンドで続きます。" },
+        { title: "自動バックアップ", desc: "スケジュールを一度決めるだけで、BackupFlowが毎日・毎週・毎月バックアップ。Wi-Fi接続時、充電中、指定した時間帯だけに限定することもできます。" },
       ],
     },
     pricing: {
@@ -768,6 +868,16 @@ window.BF_TRANSLATIONS = {
         { title: "Sobre o BackupFlow", desc: "Saiba mais sobre o aplicativo e seus recursos" },
       ],
     },
+    useCases: {
+      title: "Feito para a sua configuração",
+      subtitle: "Fotos, NAS, nuvem pessoal ou totalmente automático — o BackupFlow se adapta à forma como você guarda seus dados",
+      items: [
+        { title: "Backup de fotos", desc: "Faça backup das fotos e vídeos do iPhone no seu próprio servidor, sem assinatura de nuvem. Só as fotos novas são enviadas e o armazenamento fica sob seu controle." },
+        { title: "NAS e SFTP", desc: "Faça backup de fotos e arquivos direto no seu NAS ou servidor doméstico por uma conexão SFTP criptografada. Defina um horário e o BackupFlow cuida do resto." },
+        { title: "Nuvem pessoal (WebDAV)", desc: "Tem sua própria nuvem? O BackupFlow faz backup automático de fotos e arquivos em qualquer servidor WebDAV, e o envio continua em segundo plano." },
+        { title: "Backup automático", desc: "Escolha um horário uma vez e o BackupFlow faz o backup todo dia, semana ou mês. Limite os backups ao Wi-Fi, ao carregamento ou a uma faixa de horário." },
+      ],
+    },
     pricing: {
       title: "Preços simples",
       subtitle: "Backup profissional, acessível para todos",
@@ -838,6 +948,16 @@ window.BF_TRANSLATIONS = {
         { title: "टास्क विवरण", desc: "प्रत्येक टास्क की विस्तृत जानकारी और प्रगति देखें" },
         { title: "बैकअप हिस्ट्री", desc: "अपनी बैकअप हिस्ट्री और परफ़ॉर्मेंस मेट्रिक्स ट्रैक करें" },
         { title: "BackupFlow के बारे में", desc: "ऐप और इसकी सुविधाओं के बारे में और जानें" },
+      ],
+    },
+    useCases: {
+      title: "आपके सेटअप के लिए बना",
+      subtitle: "फ़ोटो, NAS, निजी क्लाउड या पूरी तरह ऑटोमैटिक — BackupFlow आपके डेटा स्टोर करने के तरीके के अनुसार ढल जाता है",
+      items: [
+        { title: "फ़ोटो बैकअप", desc: "बिना क्लाउड सब्सक्रिप्शन के iPhone की फ़ोटो और वीडियो का अपने सर्वर पर बैकअप लें। सिर्फ़ नई फ़ोटो भेजी जाती हैं, और स्टोरेज आपके नियंत्रण में रहता है।" },
+        { title: "NAS और SFTP", desc: "एन्क्रिप्टेड SFTP कनेक्शन से फ़ोटो और फ़ाइलों का सीधे अपने NAS या होम सर्वर पर बैकअप लें। शेड्यूल सेट करें, बाकी काम BackupFlow करेगा।" },
+        { title: "निजी क्लाउड (WebDAV)", desc: "अपना क्लाउड चलाते हैं? BackupFlow फ़ोटो और फ़ाइलों का किसी भी WebDAV सर्वर पर अपने-आप बैकअप लेता है, और अपलोड बैकग्राउंड में जारी रहता है।" },
+        { title: "ऑटोमैटिक बैकअप", desc: "एक बार शेड्यूल चुनें, BackupFlow हर दिन, हफ़्ते या महीने बैकअप लेगा। बैकअप को Wi-Fi, चार्जिंग या अपनी चुनी हुई समय-सीमा तक सीमित करें।" },
       ],
     },
     pricing: {
