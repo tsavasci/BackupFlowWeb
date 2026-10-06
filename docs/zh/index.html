@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BackupFlow 帮助</title>
+        <meta name="description" content="BackupFlow 可将 iPhone 上的照片、视频和文件备份到你自己的服务器：NAS、家庭服务器或私有云。无需订阅，也不经过第三方云。" />
+        <meta name="theme-color" content="#3B82F6" />
+        <link rel="canonical" href="https://backupflow.netlify.app/docs/zh/" />
+        <link rel="alternate" hreflang="en" href="https://backupflow.netlify.app/docs/en/" />
+        <link rel="alternate" hreflang="tr" href="https://backupflow.netlify.app/docs/tr/" />
+        <link rel="alternate" hreflang="de" href="https://backupflow.netlify.app/docs/de/" />
+        <link rel="alternate" hreflang="fr" href="https://backupflow.netlify.app/docs/fr/" />
+        <link rel="alternate" hreflang="es" href="https://backupflow.netlify.app/docs/es/" />
+        <link rel="alternate" hreflang="ru" href="https://backupflow.netlify.app/docs/ru/" />
+        <link rel="alternate" hreflang="ar" href="https://backupflow.netlify.app/docs/ar/" />
+        <link rel="alternate" hreflang="zh" href="https://backupflow.netlify.app/docs/zh/" />
+        <link rel="alternate" hreflang="ko" href="https://backupflow.netlify.app/docs/ko/" />
+        <link rel="alternate" hreflang="ja" href="https://backupflow.netlify.app/docs/ja/" />
+        <link rel="alternate" hreflang="pt" href="https://backupflow.netlify.app/docs/pt/" />
+        <link rel="alternate" hreflang="hi" href="https://backupflow.netlify.app/docs/hi/" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../styles.css" />
+        <link rel="stylesheet" href="../docs.css" />
+        <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    </head>
+    <body class="docs-body">
+        <a href="#docs-content" class="skip-link">跳转到内容</a>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="nav-logo" href="../../index.html">
+                    <span class="logo-icon">
+                        <img src="../../web_logo.png" alt="" class="logo-image" />
+                    </span>
+                    <span class="logo-text">BackupFlow</span>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a class="nav-link" href="../../index.html#features">功能</a>
+                    <a class="nav-link" href="../../index.html#pricing">价格</a>
+                    <a class="nav-link" href="../../index.html#support">支持</a>
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button
+                            type="button"
+                            class="lang-toggle"
+                            id="lang-toggle"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="lang-menu"
+                        >
+                            <span class="lang-flag">🇨🇳</span>
+                            <span class="lang-code">ZH</span>
+                            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="语言">
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../en/" hreflang="en" lang="en" data-lang-code="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../tr/" hreflang="tr" lang="tr" data-lang-code="tr"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../de/" hreflang="de" lang="de" data-lang-code="de"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../fr/" hreflang="fr" lang="fr" data-lang-code="fr"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../es/" hreflang="es" lang="es" data-lang-code="es"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ru/" hreflang="ru" lang="ru" data-lang-code="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ar/" hreflang="ar" lang="ar" data-lang-code="ar"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option active" aria-selected="true" href="../zh/" hreflang="zh" lang="zh" data-lang-code="zh"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ko/" hreflang="ko" lang="ko" data-lang-code="ko"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ja/" hreflang="ja" lang="ja" data-lang-code="ja"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../pt/" hreflang="pt" lang="pt" data-lang-code="pt"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../hi/" hreflang="hi" lang="hi" data-lang-code="hi"><span class="lang-flag">🇮🇳</span><span class="lang-name">हिन्दी</span></a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link download-btn" href="https://apps.apple.com/app/backupflow/id6753620051" target="_blank" rel="noopener noreferrer">下载</a>
+                </div>
+                <button
+                    type="button"
+                    class="nav-toggle"
+                    aria-label="切换导航"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <main id="docs-content" class="docs-page">
+            <div class="container">
+                <header class="docs-hero">
+                    <h1>BackupFlow 帮助</h1>
+                    <p class="docs-lead">BackupFlow 可将 iPhone 上的照片、视频和文件备份到你自己的服务器：NAS、家庭服务器或私有云。无需订阅，也不经过第三方云。</p>
+                </header>
+
+                <div class="docs-layout">
+                    <aside class="docs-toc" aria-labelledby="docs-toc-title">
+                        <p class="docs-toc-title" id="docs-toc-title">本页内容</p>
+                        <ol>
+                        <li><a href="#what-you-need">准备工作</a></li>
+                        <li><a href="#first-backup">设置第一次备份</a></li>
+                        <li><a href="#automatic-backups">自动备份</a></li>
+                        <li><a href="#deleted-files">已删除的文件</a></li>
+                        <li><a href="#background">后台备份</a></li>
+                        <li><a href="#history">备份历史</a></li>
+                        <li><a href="#extra-protection">额外保护</a></li>
+                        <li><a href="#troubleshooting">常见问题</a></li>
+                        <li><a href="#privacy">隐私</a></li>
+                        <li><a href="#help">需要帮助？</a></li>
+                        </ol>
+                    </aside>
+
+                    <article class="docs-content">
+                    <section id="what-you-need" class="docs-section">
+                        <h2>准备工作</h2>
+                        <ul>
+                        <li>一台支持 <b>FTP</b>、<b>SFTP</b> 或 <b>WebDAV</b> 的服务器。大多数 NAS（如群晖 Synology 或威联通 QNAP）以及 Nextcloud 等私有云至少支持其中一种。</li>
+                        <li>服务器地址、用户名和密码。</li>
+                        <li>如果服务器在家庭网络中，当 iOS 请求访问本地网络时，请轻点<b>允许</b>。</li>
+                        </ul>
+                    </section>
+
+                    <section id="first-backup" class="docs-section">
+                        <h2>设置第一次备份</h2>
+                        <ol>
+                        <li>在<b>备份中心</b>，轻点<b>已保存的服务器</b>旁边的<b>添加</b>。</li>
+                        <li>选择连接类型（FTP、SFTP 或 WebDAV），然后输入服务器地址、用户名和密码。</li>
+                        <li>轻点<b>测试连接</b>，确认设置无误。</li>
+                        <li>在<b>来源</b>中选择<b>照片图库</b>（照片、视频或两者），或轻点<b>选择文件夹</b>，从“文件”App 中选择一个文件夹。</li>
+                        <li>输入服务器上的<b>目标文件夹</b>，或轻点<b>浏览远程文件夹</b>进行选择。</li>
+                        <li>选择计划后轻点<b>保存任务</b>。BackupFlow 会询问是否立即开始第一次备份。</li>
+                        </ol>
+                        <p>第一次备份之后，只会传输新增或修改过的文件，因此之后的备份会快得多。</p>
+                    </section>
+
+                    <section id="automatic-backups" class="docs-section">
+                        <h2>自动备份</h2>
+                        <p>选择备份频率：<b>手动</b>、<b>每隔几小时</b>、<b>每日</b>、<b>每周</b>或<b>每月</b>。</p>
+                        <p>你还可以设定允许备份的条件：</p>
+                        <ul>
+                        <li><b>需要 Wi-Fi</b>：从不使用蜂窝数据。</li>
+                        <li><b>需要外部电源</b>：仅在 iPhone 充电时运行。</li>
+                        <li><b>使用允许的时间窗口</b>：例如只在夜间。</li>
+                        <li><b>最低电池电量</b>（在<b>设置 › 电池设置</b>中）：电量低时跳过备份。</li>
+                        </ul>
+                        <p>如果条件未满足，备份会等待，条件满足后立即开始。要暂时停止某个任务，请打开该任务并轻点<b>暂停计划</b>。</p>
+                    </section>
+
+                    <section id="deleted-files" class="docs-section">
+                        <h2>已删除的文件</h2>
+                        <p>在<b>删除策略</b>中，选择你在 iPhone 上删除内容时服务器上的处理方式：</p>
+                        <dl>
+                        <dt>镜像（默认）</dt><dd>服务器与来源保持完全一致。你在 iPhone 上删除的文件也会从服务器上删除。</dd>
+                        <dt>仅追加</dt><dd>服务器上的任何内容都不会被删除。</dd>
+                        <dt>归档删除</dt><dd>不删除任何内容。被移除的文件会移到服务器上带日期的 <b>.backupflow_archive</b> 文件夹中。</dd>
+                        </dl>
+                        <p class="note">打算在备份后清理 iPhone 空间？请在删除任何内容之前，先切换到<b>仅追加</b>或<b>归档删除</b>。</p>
+                    </section>
+
+                    <section id="background" class="docs-section">
+                        <h2>后台备份</h2>
+                        <p>App 何时可以在后台运行由 iOS 决定，因此计划的备份不一定会在设定的那一分钟准时开始。到时间后，BackupFlow 会开始备份或发送通知。轻点<b>立即开始</b>即可开始。</p>
+                        <p>如果 iOS 中途停止了备份，打开 BackupFlow 即可继续。已经传输过的文件会被跳过。</p>
+                        <p>首次进行大量备份时，请让 iPhone 保持连接 Wi-Fi 和电源。</p>
+                    </section>
+
+                    <section id="history" class="docs-section">
+                        <h2>备份历史</h2>
+                        <p>最近的备份会显示在<b>备份中心</b>。轻点<b>查看全部</b>可打开完整的<b>备份历史</b>。每条记录都会显示传输的文件数、总大小和耗时，也可以作为报告分享。</p>
+                        <p>要设定历史记录保留多久，请前往<b>设置 › 历史记录保留期</b>。</p>
+                    </section>
+
+                    <section id="extra-protection" class="docs-section">
+                        <h2>额外保护</h2>
+                        <ul>
+                        <li><b>验证上传</b>：检查每个文件是否完整到达服务器。</li>
+                        <li><b>需要时下载 iCloud 项目</b>：同时备份仅存储在 iCloud 中的照片和视频。</li>
+                        <li><b>SFTP</b>：BackupFlow 会在首次连接时记住你的服务器，并在其身份发生变化时发出警告。</li>
+                        </ul>
+                    </section>
+
+                    <section id="troubleshooting" class="docs-section">
+                        <h2>常见问题</h2>
+                        <dl>
+                        <dt>无法连接到服务器。</dt><dd>请检查地址、端口、用户名和密码。常用端口：FTP 21、SFTP 22、WebDAV 443。如果服务器在家里，请确认 iPhone 连接的是同一个 Wi-Fi，并已在 <b>iPhone 设置 › 隐私与安全性 › 本地网络</b>中开启访问权限。</dd>
+                        <dt>计划的备份没有运行。</dt><dd>请检查任务的条件（Wi-Fi、电源、时间窗口、电量），并确认已允许 BackupFlow 发送通知。打开 App 即可开始正在等待的备份。</dd>
+                        <dt>部分照片缺失。</dt><dd>请开启<b>需要时下载 iCloud 项目</b>。使用 iCloud 照片时，许多原件仅存储在 iCloud 中。</dd>
+                        <dt>服务器上的文件不见了。</dt><dd>该任务很可能设为<b>镜像</b>。请将其改为<b>仅追加</b>或<b>归档删除</b>。</dd>
+                        <dt>出现了 SFTP 安全警告。</dt><dd>服务器的身份发生了变化。如果服务器重新安装过或被更换，这属于正常情况；否则请在继续之前向服务器管理员确认。</dd>
+                        </dl>
+                    </section>
+
+                    <section id="privacy" class="docs-section">
+                        <h2>隐私</h2>
+                        <p>你的文件直接从 iPhone 传到你自己的服务器。BackupFlow 没有自己的服务器，从不查看你的文件，也不收集任何数据。密码安全地保存在你的设备上。</p>
+                        <p><b>设置 › 重置所有数据</b>会从这台设备上删除所有任务、历史记录和已保存的密码。服务器上的文件不受影响。</p>
+                    </section>
+
+                    <section id="help" class="docs-section">
+                        <h2>需要帮助？</h2>
+                        <p>前往<b>设置 › 联系支持</b>给我们发送电子邮件。App 版本和设备型号会自动附上。</p>
+                    </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <img src="../../web_logo.png" alt="" class="logo-image" />
+                            </div>
+                            <span class="logo-text">BackupFlow</span>
+                        </div>
+                        <p class="footer-description">专业的 iOS 备份方案,注重本地隐私与智能自动化。</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>支持</h4>
+                            <a href="./">文档</a>
+                            <a href="../../privacy-policy.html">隐私政策</a>
+                            <a href="mailto:tamersavasci@icloud.com">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 BackupFlow. 保留所有权利。</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../docs.js"></script>
+    </body>
+</html>

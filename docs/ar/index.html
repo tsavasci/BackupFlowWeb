@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>مساعدة BackupFlow</title>
+        <meta name="description" content="ينسخ BackupFlow صور iPhone ومقاطع الفيديو والملفات احتياطيًا إلى خادمك الخاص: جهاز NAS أو خادم منزلي أو سحابتك الشخصية. بلا اشتراك وبلا سحابة طرف ثالث." />
+        <meta name="theme-color" content="#3B82F6" />
+        <link rel="canonical" href="https://backupflow.netlify.app/docs/ar/" />
+        <link rel="alternate" hreflang="en" href="https://backupflow.netlify.app/docs/en/" />
+        <link rel="alternate" hreflang="tr" href="https://backupflow.netlify.app/docs/tr/" />
+        <link rel="alternate" hreflang="de" href="https://backupflow.netlify.app/docs/de/" />
+        <link rel="alternate" hreflang="fr" href="https://backupflow.netlify.app/docs/fr/" />
+        <link rel="alternate" hreflang="es" href="https://backupflow.netlify.app/docs/es/" />
+        <link rel="alternate" hreflang="ru" href="https://backupflow.netlify.app/docs/ru/" />
+        <link rel="alternate" hreflang="ar" href="https://backupflow.netlify.app/docs/ar/" />
+        <link rel="alternate" hreflang="zh" href="https://backupflow.netlify.app/docs/zh/" />
+        <link rel="alternate" hreflang="ko" href="https://backupflow.netlify.app/docs/ko/" />
+        <link rel="alternate" hreflang="ja" href="https://backupflow.netlify.app/docs/ja/" />
+        <link rel="alternate" hreflang="pt" href="https://backupflow.netlify.app/docs/pt/" />
+        <link rel="alternate" hreflang="hi" href="https://backupflow.netlify.app/docs/hi/" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../styles.css" />
+        <link rel="stylesheet" href="../docs.css" />
+        <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    </head>
+    <body class="docs-body">
+        <a href="#docs-content" class="skip-link">الانتقال إلى المحتوى</a>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="nav-logo" href="../../index.html">
+                    <span class="logo-icon">
+                        <img src="../../web_logo.png" alt="" class="logo-image" />
+                    </span>
+                    <span class="logo-text">BackupFlow</span>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a class="nav-link" href="../../index.html#features">الميزات</a>
+                    <a class="nav-link" href="../../index.html#pricing">الأسعار</a>
+                    <a class="nav-link" href="../../index.html#support">الدعم</a>
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button
+                            type="button"
+                            class="lang-toggle"
+                            id="lang-toggle"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="lang-menu"
+                        >
+                            <span class="lang-flag">🇸🇦</span>
+                            <span class="lang-code">AR</span>
+                            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="اللغة">
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../en/" hreflang="en" lang="en" data-lang-code="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../tr/" hreflang="tr" lang="tr" data-lang-code="tr"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../de/" hreflang="de" lang="de" data-lang-code="de"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../fr/" hreflang="fr" lang="fr" data-lang-code="fr"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../es/" hreflang="es" lang="es" data-lang-code="es"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ru/" hreflang="ru" lang="ru" data-lang-code="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option active" aria-selected="true" href="../ar/" hreflang="ar" lang="ar" data-lang-code="ar"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../zh/" hreflang="zh" lang="zh" data-lang-code="zh"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ko/" hreflang="ko" lang="ko" data-lang-code="ko"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ja/" hreflang="ja" lang="ja" data-lang-code="ja"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../pt/" hreflang="pt" lang="pt" data-lang-code="pt"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../hi/" hreflang="hi" lang="hi" data-lang-code="hi"><span class="lang-flag">🇮🇳</span><span class="lang-name">हिन्दी</span></a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link download-btn" href="https://apps.apple.com/app/backupflow/id6753620051" target="_blank" rel="noopener noreferrer">تنزيل</a>
+                </div>
+                <button
+                    type="button"
+                    class="nav-toggle"
+                    aria-label="تبديل التنقل"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <main id="docs-content" class="docs-page">
+            <div class="container">
+                <header class="docs-hero">
+                    <h1>مساعدة BackupFlow</h1>
+                    <p class="docs-lead">ينسخ BackupFlow صور iPhone ومقاطع الفيديو والملفات احتياطيًا إلى خادمك الخاص: جهاز NAS أو خادم منزلي أو سحابتك الشخصية. بلا اشتراك وبلا سحابة طرف ثالث.</p>
+                </header>
+
+                <div class="docs-layout">
+                    <aside class="docs-toc" aria-labelledby="docs-toc-title">
+                        <p class="docs-toc-title" id="docs-toc-title">في هذه الصفحة</p>
+                        <ol>
+                        <li><a href="#what-you-need">ما تحتاج إليه</a></li>
+                        <li><a href="#first-backup">إعداد أول نسخة احتياطية</a></li>
+                        <li><a href="#automatic-backups">النسخ الاحتياطي التلقائي</a></li>
+                        <li><a href="#deleted-files">الملفات المحذوفة</a></li>
+                        <li><a href="#background">النسخ في الخلفية</a></li>
+                        <li><a href="#history">سجل النسخ الاحتياطي</a></li>
+                        <li><a href="#extra-protection">حماية إضافية</a></li>
+                        <li><a href="#troubleshooting">حل المشكلات</a></li>
+                        <li><a href="#privacy">الخصوصية</a></li>
+                        <li><a href="#help">هل تحتاج إلى مساعدة؟</a></li>
+                        </ol>
+                    </aside>
+
+                    <article class="docs-content">
+                    <section id="what-you-need" class="docs-section">
+                        <h2>ما تحتاج إليه</h2>
+                        <ul>
+                        <li>خادم يدعم <b>FTP</b> أو <b>SFTP</b> أو <b>WebDAV</b>. معظم أجهزة NAS (مثل Synology أو QNAP) والسحابات الشخصية مثل Nextcloud تدعم واحدًا منها على الأقل.</li>
+                        <li>عنوان الخادم واسم المستخدم وكلمة المرور.</li>
+                        <li>إذا كان الخادم على شبكتك المنزلية، اضغط <b>السماح</b> عندما يطلب iOS الوصول إلى الشبكة المحلية.</li>
+                        </ul>
+                    </section>
+
+                    <section id="first-backup" class="docs-section">
+                        <h2>إعداد أول نسخة احتياطية</h2>
+                        <ol>
+                        <li>في <b>مركز النسخ الاحتياطي</b>، اضغط <b>إضافة</b> بجانب <b>الخوادم المحفوظة</b>.</li>
+                        <li>اختر نوع الاتصال (FTP أو SFTP أو WebDAV) وأدخل عنوان الخادم واسم المستخدم وكلمة المرور.</li>
+                        <li>اضغط <b>اختبار الاتصال</b> للتأكد من صحة كل شيء.</li>
+                        <li>ضمن <b>المصدر</b>، اختر <b>مكتبة الصور</b> (صور أو فيديو أو كلاهما) أو اضغط <b>اختر مجلد</b> لاختيار مجلد من تطبيق الملفات.</li>
+                        <li>أدخل <b>مجلد الوجهة</b> على الخادم أو اضغط <b>تصفح المجلد البعيد</b> لاختياره.</li>
+                        <li>اختر جدولًا واضغط <b>حفظ المهمة</b>. سيعرض BackupFlow بدء أول نسخة احتياطية فورًا.</li>
+                        </ol>
+                        <p>بعد النسخة الأولى، تُرسل الملفات الجديدة أو المعدّلة فقط، لذا تكون النسخ التالية أسرع بكثير.</p>
+                    </section>
+
+                    <section id="automatic-backups" class="docs-section">
+                        <h2>النسخ الاحتياطي التلقائي</h2>
+                        <p>اختر عدد مرات النسخ: <b>يدوي</b> أو <b>كل بضع ساعات</b> أو <b>يومياً</b> أو <b>أسبوعياً</b> أو <b>شهري</b>.</p>
+                        <p>يمكنك أيضًا تحديد متى يُسمح بالنسخ:</p>
+                        <ul>
+                        <li><b>يتطلب Wi-Fi</b>: لا يستخدم بيانات الجوال أبدًا.</li>
+                        <li><b>يتطلب طاقة خارجية</b>: يعمل فقط أثناء شحن iPhone.</li>
+                        <li><b>استخدام نافذة الوقت المسموح بها</b>: مثلًا في الليل فقط.</li>
+                        <li><b>الحد الأدنى لمستوى البطارية</b> (في <b>الإعدادات › إعدادات البطارية</b>): يتخطى النسخ عند انخفاض البطارية.</li>
+                        </ul>
+                        <p>إذا لم يتحقق شرط ما، تنتظر النسخة وتبدأ فور تحققه. لإيقاف مهمة مؤقتًا، افتحها واضغط <b>إيقاف الجدولة</b>.</p>
+                    </section>
+
+                    <section id="deleted-files" class="docs-section">
+                        <h2>الملفات المحذوفة</h2>
+                        <p>ضمن <b>سياسة الحذف</b>، اختر ما يحدث على الخادم عندما تحذف شيئًا من iPhone:</p>
+                        <dl>
+                        <dt>مرآة (الافتراضي)</dt><dd>يبقى الخادم نسخة مطابقة للمصدر. الملفات التي تحذفها من iPhone تُحذف من الخادم أيضًا.</dd>
+                        <dt>إضافة فقط</dt><dd>لا يُحذف أي شيء من الخادم أبدًا.</dd>
+                        <dt>حذف مع الأرشفة</dt><dd>لا يُحذف شيء. تُنقل الملفات المزالة إلى مجلد <b>.backupflow_archive</b> مؤرخ على الخادم.</dd>
+                        </dl>
+                        <p class="note">هل تنوي تحرير مساحة على iPhone بعد النسخ؟ انتقل إلى <b>إضافة فقط</b> أو <b>حذف مع الأرشفة</b> قبل حذف أي شيء.</p>
+                    </section>
+
+                    <section id="background" class="docs-section">
+                        <h2>النسخ في الخلفية</h2>
+                        <p>يقرر iOS متى يمكن للتطبيقات العمل في الخلفية، لذا قد لا تبدأ النسخة المجدولة في الدقيقة المحددة تمامًا. عند حلول الموعد، يبدأ BackupFlow النسخ أو يرسل إشعارًا. اضغط <b>ابدأ الآن</b> للبدء.</p>
+                        <p>إذا أوقف iOS النسخ قبل انتهائه، افتح BackupFlow وسيكمل. تُتخطى الملفات التي أُرسلت مسبقًا.</p>
+                        <p>للنسخة الأولى الكبيرة، أبقِ iPhone متصلًا بشبكة Wi-Fi وبالشاحن.</p>
+                    </section>
+
+                    <section id="history" class="docs-section">
+                        <h2>سجل النسخ الاحتياطي</h2>
+                        <p>تظهر أحدث النسخ في <b>مركز النسخ الاحتياطي</b>. اضغط <b>عرض الكل</b> لفتح <b>سجل النسخ الاحتياطي</b> كاملًا. يعرض كل إدخال عدد الملفات المرسلة والحجم الإجمالي والمدة، ويمكنك مشاركته كتقرير.</p>
+                        <p>لاختيار مدة الاحتفاظ بالسجل، انتقل إلى <b>الإعدادات › الاحتفاظ بالسجل</b>.</p>
+                    </section>
+
+                    <section id="extra-protection" class="docs-section">
+                        <h2>حماية إضافية</h2>
+                        <ul>
+                        <li><b>التحقق من الرفع</b>: يتأكد من وصول كل ملف إلى الخادم سليمًا.</li>
+                        <li><b>تنزيل عناصر iCloud عند الحاجة</b>: ينسخ أيضًا الصور ومقاطع الفيديو المخزنة في iCloud فقط.</li>
+                        <li><b>SFTP</b>: يتذكر BackupFlow خادمك عند أول اتصال وينبّهك إذا تغيّرت هويته.</li>
+                        </ul>
+                    </section>
+
+                    <section id="troubleshooting" class="docs-section">
+                        <h2>حل المشكلات</h2>
+                        <dl>
+                        <dt>لا أستطيع الاتصال بالخادم.</dt><dd>تحقق من العنوان والمنفذ واسم المستخدم وكلمة المرور. المنافذ المعتادة: FTP 21 وSFTP 22 وWebDAV 443. إذا كان الخادم في المنزل، تأكد من أن iPhone على شبكة Wi-Fi نفسها وأن الوصول مفعّل في <b>إعدادات iPhone › الخصوصية والأمن › الشبكة المحلية</b>.</dd>
+                        <dt>لم تعمل نسخة مجدولة.</dt><dd>تحقق من شروط المهمة (Wi-Fi والطاقة ونافذة الوقت والبطارية) ومن السماح بإشعارات BackupFlow. افتح التطبيق لبدء نسخة منتظرة.</dd>
+                        <dt>بعض الصور مفقودة.</dt><dd>فعّل <b>تنزيل عناصر iCloud عند الحاجة</b>. مع صور iCloud، تُحفظ كثير من النسخ الأصلية في iCloud فقط.</dd>
+                        <dt>اختفت ملفات من الخادم.</dt><dd>غالبًا ما تستخدم المهمة وضع <b>مرآة</b>. انتقل إلى <b>إضافة فقط</b> أو <b>حذف مع الأرشفة</b>.</dd>
+                        <dt>أرى تحذير أمان SFTP.</dt><dd>تغيّرت هوية الخادم. هذا متوقع إذا أُعيد تثبيت الخادم أو استُبدل. وإلا فاستشر من يدير الخادم قبل المتابعة.</dd>
+                        </dl>
+                    </section>
+
+                    <section id="privacy" class="docs-section">
+                        <h2>الخصوصية</h2>
+                        <p>تنتقل ملفاتك مباشرة من iPhone إلى خادمك الخاص. ليس لدى BackupFlow خوادم خاصة به، ولا يرى ملفاتك أبدًا، ولا يجمع أي بيانات. تُحفظ كلمات المرور بأمان على جهازك.</p>
+                        <p>يزيل <b>الإعدادات › إعادة تعيين جميع البيانات</b> كل المهام والسجل وكلمات المرور المحفوظة من هذا الجهاز. لا تُمس الملفات الموجودة على خوادمك.</p>
+                    </section>
+
+                    <section id="help" class="docs-section">
+                        <h2>هل تحتاج إلى مساعدة؟</h2>
+                        <p>انتقل إلى <b>الإعدادات › اتصل بالدعم</b> لإرسال بريد إلكتروني إلينا. يُضاف إصدار التطبيق وطراز الجهاز تلقائيًا.</p>
+                    </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <img src="../../web_logo.png" alt="" class="logo-image" />
+                            </div>
+                            <span class="logo-text">BackupFlow</span>
+                        </div>
+                        <p class="footer-description">نسخ احتياطي احترافي لنظام iOS مع خصوصية محلية وأتمتة ذكية.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>الدعم</h4>
+                            <a href="./">التوثيق</a>
+                            <a href="../../privacy-policy.html">سياسة الخصوصية</a>
+                            <a href="mailto:tamersavasci@icloud.com">تواصل معنا</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 BackupFlow. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../docs.js"></script>
+    </body>
+</html>

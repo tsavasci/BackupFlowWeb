@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BackupFlow Hilfe</title>
+        <meta name="description" content="BackupFlow sichert Fotos, Videos und Dateien von deinem iPhone auf deinem eigenen Server – einem NAS, einem Heimserver oder deiner persönlichen Cloud. Ohne Abo und ohne fremde Cloud." />
+        <meta name="theme-color" content="#3B82F6" />
+        <link rel="canonical" href="https://backupflow.netlify.app/docs/de/" />
+        <link rel="alternate" hreflang="en" href="https://backupflow.netlify.app/docs/en/" />
+        <link rel="alternate" hreflang="tr" href="https://backupflow.netlify.app/docs/tr/" />
+        <link rel="alternate" hreflang="de" href="https://backupflow.netlify.app/docs/de/" />
+        <link rel="alternate" hreflang="fr" href="https://backupflow.netlify.app/docs/fr/" />
+        <link rel="alternate" hreflang="es" href="https://backupflow.netlify.app/docs/es/" />
+        <link rel="alternate" hreflang="ru" href="https://backupflow.netlify.app/docs/ru/" />
+        <link rel="alternate" hreflang="ar" href="https://backupflow.netlify.app/docs/ar/" />
+        <link rel="alternate" hreflang="zh" href="https://backupflow.netlify.app/docs/zh/" />
+        <link rel="alternate" hreflang="ko" href="https://backupflow.netlify.app/docs/ko/" />
+        <link rel="alternate" hreflang="ja" href="https://backupflow.netlify.app/docs/ja/" />
+        <link rel="alternate" hreflang="pt" href="https://backupflow.netlify.app/docs/pt/" />
+        <link rel="alternate" hreflang="hi" href="https://backupflow.netlify.app/docs/hi/" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../styles.css" />
+        <link rel="stylesheet" href="../docs.css" />
+        <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    </head>
+    <body class="docs-body">
+        <a href="#docs-content" class="skip-link">Zum Inhalt springen</a>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="nav-logo" href="../../index.html">
+                    <span class="logo-icon">
+                        <img src="../../web_logo.png" alt="" class="logo-image" />
+                    </span>
+                    <span class="logo-text">BackupFlow</span>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a class="nav-link" href="../../index.html#features">Funktionen</a>
+                    <a class="nav-link" href="../../index.html#pricing">Preise</a>
+                    <a class="nav-link" href="../../index.html#support">Support</a>
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button
+                            type="button"
+                            class="lang-toggle"
+                            id="lang-toggle"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="lang-menu"
+                        >
+                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-code">DE</span>
+                            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Sprache">
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../en/" hreflang="en" lang="en" data-lang-code="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../tr/" hreflang="tr" lang="tr" data-lang-code="tr"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option active" aria-selected="true" href="../de/" hreflang="de" lang="de" data-lang-code="de"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../fr/" hreflang="fr" lang="fr" data-lang-code="fr"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../es/" hreflang="es" lang="es" data-lang-code="es"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ru/" hreflang="ru" lang="ru" data-lang-code="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ar/" hreflang="ar" lang="ar" data-lang-code="ar"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../zh/" hreflang="zh" lang="zh" data-lang-code="zh"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ko/" hreflang="ko" lang="ko" data-lang-code="ko"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ja/" hreflang="ja" lang="ja" data-lang-code="ja"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../pt/" hreflang="pt" lang="pt" data-lang-code="pt"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../hi/" hreflang="hi" lang="hi" data-lang-code="hi"><span class="lang-flag">🇮🇳</span><span class="lang-name">हिन्दी</span></a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link download-btn" href="https://apps.apple.com/app/backupflow/id6753620051" target="_blank" rel="noopener noreferrer">Herunterladen</a>
+                </div>
+                <button
+                    type="button"
+                    class="nav-toggle"
+                    aria-label="Navigation umschalten"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <main id="docs-content" class="docs-page">
+            <div class="container">
+                <header class="docs-hero">
+                    <h1>BackupFlow Hilfe</h1>
+                    <p class="docs-lead">BackupFlow sichert Fotos, Videos und Dateien von deinem iPhone auf deinem eigenen Server – einem NAS, einem Heimserver oder deiner persönlichen Cloud. Ohne Abo und ohne fremde Cloud.</p>
+                </header>
+
+                <div class="docs-layout">
+                    <aside class="docs-toc" aria-labelledby="docs-toc-title">
+                        <p class="docs-toc-title" id="docs-toc-title">Auf dieser Seite</p>
+                        <ol>
+                        <li><a href="#what-you-need">Was du brauchst</a></li>
+                        <li><a href="#first-backup">Erstes Backup einrichten</a></li>
+                        <li><a href="#automatic-backups">Automatische Backups</a></li>
+                        <li><a href="#deleted-files">Gelöschte Dateien</a></li>
+                        <li><a href="#background">Backups im Hintergrund</a></li>
+                        <li><a href="#history">Backup-Verlauf</a></li>
+                        <li><a href="#extra-protection">Zusätzlicher Schutz</a></li>
+                        <li><a href="#troubleshooting">Problemlösung</a></li>
+                        <li><a href="#privacy">Datenschutz</a></li>
+                        <li><a href="#help">Brauchst du Hilfe?</a></li>
+                        </ol>
+                    </aside>
+
+                    <article class="docs-content">
+                    <section id="what-you-need" class="docs-section">
+                        <h2>Was du brauchst</h2>
+                        <ul>
+                        <li>Einen Server, der <b>FTP</b>, <b>SFTP</b> oder <b>WebDAV</b> unterstützt. Die meisten NAS-Geräte (z. B. Synology oder QNAP) und persönliche Clouds wie Nextcloud unterstützen mindestens eines davon.</li>
+                        <li>Die Serveradresse, einen Benutzernamen und ein Passwort.</li>
+                        <li>Steht der Server in deinem Heimnetz, tippe auf <b>Erlauben</b>, wenn iOS nach dem Zugriff auf das lokale Netzwerk fragt.</li>
+                        </ul>
+                    </section>
+
+                    <section id="first-backup" class="docs-section">
+                        <h2>Erstes Backup einrichten</h2>
+                        <ol>
+                        <li>Tippe in der <b>Backup-Zentrale</b> neben <b>Gespeicherte Server</b> auf <b>Hinzufügen</b>.</li>
+                        <li>Wähle die Verbindungsart (FTP, SFTP oder WebDAV) und gib Serveradresse, Benutzername und Passwort ein.</li>
+                        <li>Tippe auf <b>Verbindung testen</b>, um zu prüfen, ob alles stimmt.</li>
+                        <li>Wähle unter <b>Quelle</b> die <b>Fotomediathek</b> (Fotos, Videos oder beides) oder tippe auf <b>Ordner auswählen</b>, um einen Ordner aus der Dateien-App zu wählen.</li>
+                        <li>Gib einen <b>Zielordner</b> auf dem Server ein oder tippe auf <b>Remote-Ordner durchsuchen</b>.</li>
+                        <li>Wähle einen Zeitplan und tippe auf <b>Aufgabe speichern</b>. BackupFlow bietet an, das erste Backup sofort zu starten.</li>
+                        </ol>
+                        <p>Nach dem ersten Backup werden nur neue oder geänderte Dateien übertragen – spätere Backups sind daher viel schneller.</p>
+                    </section>
+
+                    <section id="automatic-backups" class="docs-section">
+                        <h2>Automatische Backups</h2>
+                        <p>Wähle, wie oft gesichert wird: <b>Manuell</b>, <b>Alle paar Stunden</b>, <b>Täglich</b>, <b>Wöchentlich</b> oder <b>Monatlich</b>.</p>
+                        <p>Du kannst auch festlegen, wann ein Backup laufen darf:</p>
+                        <ul>
+                        <li><b>Wi-Fi erforderlich</b>: nutzt nie mobile Daten.</li>
+                        <li><b>Externe Stromversorgung erforderlich</b>: läuft nur, während das iPhone lädt.</li>
+                        <li><b>Erlaubtes Zeitfenster verwenden</b>: zum Beispiel nur nachts.</li>
+                        <li><b>Minimaler Akkustand</b> (unter <b>Einstellungen › Akkueinstellungen</b>): überspringt Backups bei niedrigem Akku.</li>
+                        </ul>
+                        <p>Ist eine Bedingung nicht erfüllt, wartet das Backup und startet, sobald sie erfüllt ist. Um eine Aufgabe vorübergehend anzuhalten, öffne sie und tippe auf <b>Planung pausieren</b>.</p>
+                    </section>
+
+                    <section id="deleted-files" class="docs-section">
+                        <h2>Gelöschte Dateien</h2>
+                        <p>Lege unter <b>Löschrichtlinie</b> fest, was auf dem Server passiert, wenn du etwas auf dem iPhone löschst:</p>
+                        <dl>
+                        <dt>Spiegeln (Standard)</dt><dd>Der Server bleibt eine exakte Kopie der Quelle. Auf dem iPhone gelöschte Dateien werden auch auf dem Server gelöscht.</dd>
+                        <dt>Nur hinzufügen</dt><dd>Auf dem Server wird nie etwas gelöscht.</dd>
+                        <dt>Löschen archivieren</dt><dd>Nichts wird gelöscht. Entfernte Dateien werden in einen datierten Ordner <b>.backupflow_archive</b> auf dem Server verschoben.</dd>
+                        </dl>
+                        <p class="note">Du willst nach dem Backup Platz auf dem iPhone schaffen? Wechsle zu <b>Nur hinzufügen</b> oder <b>Löschen archivieren</b>, bevor du etwas löschst.</p>
+                    </section>
+
+                    <section id="background" class="docs-section">
+                        <h2>Backups im Hintergrund</h2>
+                        <p>iOS entscheidet, wann Apps im Hintergrund arbeiten dürfen. Ein geplantes Backup startet daher nicht immer auf die Minute genau. Zur geplanten Zeit startet BackupFlow das Backup oder sendet eine Mitteilung. Tippe auf <b>Jetzt starten</b>, um zu beginnen.</p>
+                        <p>Bricht iOS ein Backup vorzeitig ab, öffne BackupFlow – es geht weiter. Bereits übertragene Dateien werden übersprungen.</p>
+                        <p>Halte das iPhone bei einem großen ersten Backup im WLAN und am Strom.</p>
+                    </section>
+
+                    <section id="history" class="docs-section">
+                        <h2>Backup-Verlauf</h2>
+                        <p>Deine letzten Backups erscheinen in der <b>Backup-Zentrale</b>. Tippe auf <b>Alle anzeigen</b> für den vollständigen <b>Backup-Verlauf</b>. Jeder Eintrag zeigt die Anzahl der Dateien, die Gesamtgröße und die Dauer. Du kannst ihn auch als Bericht teilen.</p>
+                        <p>Wie lange der Verlauf aufbewahrt wird, legst du unter <b>Einstellungen › Verlaufsaufbewahrung</b> fest.</p>
+                    </section>
+
+                    <section id="extra-protection" class="docs-section">
+                        <h2>Zusätzlicher Schutz</h2>
+                        <ul>
+                        <li><b>Uploads prüfen</b>: kontrolliert, dass jede Datei unbeschädigt auf dem Server angekommen ist.</li>
+                        <li><b>iCloud-Objekte bei Bedarf laden</b>: sichert auch Fotos und Videos, die nur in iCloud liegen.</li>
+                        <li><b>SFTP</b>: BackupFlow merkt sich deinen Server bei der ersten Verbindung und warnt dich, wenn sich seine Identität ändert.</li>
+                        </ul>
+                    </section>
+
+                    <section id="troubleshooting" class="docs-section">
+                        <h2>Problemlösung</h2>
+                        <dl>
+                        <dt>Ich kann keine Verbindung zum Server herstellen.</dt><dd>Prüfe Adresse, Port, Benutzername und Passwort. Übliche Ports: FTP 21, SFTP 22, WebDAV 443. Bei einem Server zu Hause muss das iPhone im selben WLAN sein und unter <b>iPhone-Einstellungen › Datenschutz &amp; Sicherheit › Lokales Netzwerk</b> Zugriff haben.</dd>
+                        <dt>Ein geplantes Backup ist nicht gelaufen.</dt><dd>Prüfe die Bedingungen der Aufgabe (WLAN, Strom, Zeitfenster, Akku) und ob Mitteilungen für BackupFlow erlaubt sind. Öffne die App, um ein wartendes Backup zu starten.</dd>
+                        <dt>Einige Fotos fehlen.</dt><dd>Aktiviere <b>iCloud-Objekte bei Bedarf laden</b>. Mit iCloud-Fotos liegen viele Originale nur in iCloud.</dd>
+                        <dt>Dateien sind von meinem Server verschwunden.</dt><dd>Die Aufgabe nutzt vermutlich <b>Spiegeln</b>. Wechsle zu <b>Nur hinzufügen</b> oder <b>Löschen archivieren</b>.</dd>
+                        <dt>Ich sehe eine SFTP-Sicherheitswarnung.</dt><dd>Die Identität des Servers hat sich geändert. Das ist normal, wenn der Server neu installiert oder ersetzt wurde. Andernfalls frage vor dem Fortfahren die Person, die den Server verwaltet.</dd>
+                        </dl>
+                    </section>
+
+                    <section id="privacy" class="docs-section">
+                        <h2>Datenschutz</h2>
+                        <p>Deine Dateien gehen direkt vom iPhone auf deinen eigenen Server. BackupFlow hat keine eigenen Server, sieht deine Dateien nie und sammelt keine Daten. Passwörter werden sicher auf deinem Gerät gespeichert.</p>
+                        <p><b>Einstellungen › Alle Daten zurücksetzen</b> entfernt alle Aufgaben, den Verlauf und gespeicherte Passwörter von diesem Gerät. Dateien auf deinen Servern bleiben unberührt.</p>
+                    </section>
+
+                    <section id="help" class="docs-section">
+                        <h2>Brauchst du Hilfe?</h2>
+                        <p>Unter <b>Einstellungen › Support kontaktieren</b> kannst du uns eine E-Mail senden. App-Version und Gerätemodell werden automatisch hinzugefügt.</p>
+                    </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <img src="../../web_logo.png" alt="" class="logo-image" />
+                            </div>
+                            <span class="logo-text">BackupFlow</span>
+                        </div>
+                        <p class="footer-description">Professionelles iOS-Backup mit lokaler Privatsphäre und intelligenter Automatisierung.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Support</h4>
+                            <a href="./">Dokumentation</a>
+                            <a href="../../privacy-policy.html">Datenschutzrichtlinie</a>
+                            <a href="mailto:tamersavasci@icloud.com">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 BackupFlow. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../docs.js"></script>
+    </body>
+</html>

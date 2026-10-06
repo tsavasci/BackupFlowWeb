@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BackupFlow Yardım</title>
+        <meta name="description" content="BackupFlow, iPhone&#x27;unuzdaki fotoğraf, video ve dosyaları kendi sunucunuza yedekler: NAS, ev sunucusu ya da kişisel bulutunuz. Abonelik yok, üçüncü taraf bulut yok." />
+        <meta name="theme-color" content="#3B82F6" />
+        <link rel="canonical" href="https://backupflow.netlify.app/docs/tr/" />
+        <link rel="alternate" hreflang="en" href="https://backupflow.netlify.app/docs/en/" />
+        <link rel="alternate" hreflang="tr" href="https://backupflow.netlify.app/docs/tr/" />
+        <link rel="alternate" hreflang="de" href="https://backupflow.netlify.app/docs/de/" />
+        <link rel="alternate" hreflang="fr" href="https://backupflow.netlify.app/docs/fr/" />
+        <link rel="alternate" hreflang="es" href="https://backupflow.netlify.app/docs/es/" />
+        <link rel="alternate" hreflang="ru" href="https://backupflow.netlify.app/docs/ru/" />
+        <link rel="alternate" hreflang="ar" href="https://backupflow.netlify.app/docs/ar/" />
+        <link rel="alternate" hreflang="zh" href="https://backupflow.netlify.app/docs/zh/" />
+        <link rel="alternate" hreflang="ko" href="https://backupflow.netlify.app/docs/ko/" />
+        <link rel="alternate" hreflang="ja" href="https://backupflow.netlify.app/docs/ja/" />
+        <link rel="alternate" hreflang="pt" href="https://backupflow.netlify.app/docs/pt/" />
+        <link rel="alternate" hreflang="hi" href="https://backupflow.netlify.app/docs/hi/" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../styles.css" />
+        <link rel="stylesheet" href="../docs.css" />
+        <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    </head>
+    <body class="docs-body">
+        <a href="#docs-content" class="skip-link">İçeriğe atla</a>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="nav-logo" href="../../index.html">
+                    <span class="logo-icon">
+                        <img src="../../web_logo.png" alt="" class="logo-image" />
+                    </span>
+                    <span class="logo-text">BackupFlow</span>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a class="nav-link" href="../../index.html#features">Özellikler</a>
+                    <a class="nav-link" href="../../index.html#pricing">Fiyatlandırma</a>
+                    <a class="nav-link" href="../../index.html#support">Destek</a>
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button
+                            type="button"
+                            class="lang-toggle"
+                            id="lang-toggle"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="lang-menu"
+                        >
+                            <span class="lang-flag">🇹🇷</span>
+                            <span class="lang-code">TR</span>
+                            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Dil">
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../en/" hreflang="en" lang="en" data-lang-code="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option active" aria-selected="true" href="../tr/" hreflang="tr" lang="tr" data-lang-code="tr"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../de/" hreflang="de" lang="de" data-lang-code="de"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../fr/" hreflang="fr" lang="fr" data-lang-code="fr"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../es/" hreflang="es" lang="es" data-lang-code="es"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ru/" hreflang="ru" lang="ru" data-lang-code="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ar/" hreflang="ar" lang="ar" data-lang-code="ar"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../zh/" hreflang="zh" lang="zh" data-lang-code="zh"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ko/" hreflang="ko" lang="ko" data-lang-code="ko"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../ja/" hreflang="ja" lang="ja" data-lang-code="ja"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../pt/" hreflang="pt" lang="pt" data-lang-code="pt"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a></li>
+                            <li role="presentation"><a role="option" class="lang-option" aria-selected="false" href="../hi/" hreflang="hi" lang="hi" data-lang-code="hi"><span class="lang-flag">🇮🇳</span><span class="lang-name">हिन्दी</span></a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link download-btn" href="https://apps.apple.com/app/backupflow/id6753620051" target="_blank" rel="noopener noreferrer">İndir</a>
+                </div>
+                <button
+                    type="button"
+                    class="nav-toggle"
+                    aria-label="Menüyü aç/kapat"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <main id="docs-content" class="docs-page">
+            <div class="container">
+                <header class="docs-hero">
+                    <h1>BackupFlow Yardım</h1>
+                    <p class="docs-lead">BackupFlow, iPhone&#x27;unuzdaki fotoğraf, video ve dosyaları kendi sunucunuza yedekler: NAS, ev sunucusu ya da kişisel bulutunuz. Abonelik yok, üçüncü taraf bulut yok.</p>
+                </header>
+
+                <div class="docs-layout">
+                    <aside class="docs-toc" aria-labelledby="docs-toc-title">
+                        <p class="docs-toc-title" id="docs-toc-title">Bu sayfada</p>
+                        <ol>
+                        <li><a href="#what-you-need">Neye ihtiyacınız var?</a></li>
+                        <li><a href="#first-backup">İlk yedeğinizi kurun</a></li>
+                        <li><a href="#automatic-backups">Otomatik yedekleme</a></li>
+                        <li><a href="#deleted-files">Silinen dosyalar</a></li>
+                        <li><a href="#background">Arka planda yedekleme</a></li>
+                        <li><a href="#history">Yedek geçmişi</a></li>
+                        <li><a href="#extra-protection">Ek koruma</a></li>
+                        <li><a href="#troubleshooting">Sorun giderme</a></li>
+                        <li><a href="#privacy">Gizlilik</a></li>
+                        <li><a href="#help">Yardım mı lazım?</a></li>
+                        </ol>
+                    </aside>
+
+                    <article class="docs-content">
+                    <section id="what-you-need" class="docs-section">
+                        <h2>Neye ihtiyacınız var?</h2>
+                        <ul>
+                        <li><b>FTP</b>, <b>SFTP</b> veya <b>WebDAV</b> destekleyen bir sunucu. Çoğu NAS cihazı (Synology, QNAP gibi) ve Nextcloud gibi kişisel bulutlar bunlardan en az birini destekler.</li>
+                        <li>Sunucu adresi, kullanıcı adı ve parola.</li>
+                        <li>Sunucu ev ağınızdaysa, iOS yerel ağ erişimi istediğinde <b>İzin Ver</b>'e dokunun.</li>
+                        </ul>
+                    </section>
+
+                    <section id="first-backup" class="docs-section">
+                        <h2>İlk yedeğinizi kurun</h2>
+                        <ol>
+                        <li><b>Yedekleme Merkezi</b>'nde, <b>Kayıtlı sunucular</b> yanındaki <b>Ekle</b>'ye dokunun.</li>
+                        <li>Bağlantı türünü (FTP, SFTP veya WebDAV) seçin; sunucu adresini, kullanıcı adını ve parolayı girin.</li>
+                        <li>Her şeyin doğru olduğundan emin olmak için <b>Bağlantıyı Test Et</b>'e dokunun.</li>
+                        <li><b>Kaynak</b> bölümünde <b>Fotoğraf Galerisi</b>'ni (fotoğraf, video veya ikisi) seçin ya da Dosyalar uygulamasından bir klasör seçmek için <b>Klasör Seç</b>'e dokunun.</li>
+                        <li>Sunucudaki <b>Hedef Klasörü</b>'nü yazın ya da seçmek için <b>Uzak klasöre göz at</b>'a dokunun.</li>
+                        <li>Zamanlamayı seçip <b>Görevi Kaydet</b>'e dokunun. BackupFlow ilk yedeği hemen başlatmayı önerir.</li>
+                        </ol>
+                        <p>İlk yedekten sonra yalnızca yeni veya değişen dosyalar gönderilir; bu yüzden sonraki yedekler çok daha hızlıdır.</p>
+                    </section>
+
+                    <section id="automatic-backups" class="docs-section">
+                        <h2>Otomatik yedekleme</h2>
+                        <p>Yedeğin ne sıklıkla alınacağını seçin: <b>Manuel</b>, <b>Birkaç saatte bir</b>, <b>Günlük</b>, <b>Haftalık</b> veya <b>Aylık</b>.</p>
+                        <p>Yedeğin ne zaman çalışabileceğini de belirleyebilirsiniz:</p>
+                        <ul>
+                        <li><b>Wi-Fi gerekli</b>: mobil veri hiç kullanılmaz.</li>
+                        <li><b>Harici güç gerekli</b>: yalnızca iPhone şarj olurken çalışır.</li>
+                        <li><b>İzinli saat aralığını kullan</b>: örneğin yalnızca gece.</li>
+                        <li><b>Minimum Pil Seviyesi</b> (<b>Ayarlar › Pil Ayarları</b>): pil düşükken yedek atlanır.</li>
+                        </ul>
+                        <p>Koşul sağlanmazsa yedek bekler ve koşul sağlanınca başlar. Bir görevi bir süreliğine durdurmak için görevi açıp <b>Zamanlamayı Duraklat</b>'a dokunun.</p>
+                    </section>
+
+                    <section id="deleted-files" class="docs-section">
+                        <h2>Silinen dosyalar</h2>
+                        <p><b>Silme politikası</b> bölümünde, iPhone'unuzda bir şey sildiğinizde sunucuda ne olacağını seçin:</p>
+                        <dl>
+                        <dt>Ayna (varsayılan)</dt><dd>Sunucu, kaynağın birebir kopyası olarak kalır. iPhone'da sildiğiniz dosyalar sunucudan da silinir.</dd>
+                        <dt>Sadece ekle</dt><dd>Sunucudan hiçbir şey silinmez.</dd>
+                        <dt>Arşivli silme</dt><dd>Hiçbir şey silinmez. Kaldırılan dosyalar sunucudaki tarihli <b>.backupflow_archive</b> klasörüne taşınır.</dd>
+                        </dl>
+                        <p class="note">Yedekten sonra iPhone'da yer açmayı mı düşünüyorsunuz? Bir şey silmeden önce <b>Sadece ekle</b> veya <b>Arşivli silme</b>'ye geçin.</p>
+                    </section>
+
+                    <section id="background" class="docs-section">
+                        <h2>Arka planda yedekleme</h2>
+                        <p>Uygulamaların arka planda ne zaman çalışacağına iOS karar verir; bu yüzden zamanlanmış yedek tam seçtiğiniz dakikada başlamayabilir. Zamanı geldiğinde BackupFlow yedeği başlatır ya da bir bildirim gönderir. Başlatmak için <b>Şimdi Başlat</b>'a dokunun.</p>
+                        <p>iOS bir yedeği bitmeden durdurursa BackupFlow'u açın, yedek kaldığı yerden devam eder. Önceden gönderilen dosyalar atlanır.</p>
+                        <p>Büyük bir ilk yedek için iPhone'unuzu Wi-Fi'da ve şarjda tutun.</p>
+                    </section>
+
+                    <section id="history" class="docs-section">
+                        <h2>Yedek geçmişi</h2>
+                        <p>Son yedekleriniz <b>Yedekleme Merkezi</b>'nde görünür. Tamamı için <b>Tümünü gör</b>'e dokunarak <b>Yedek Geçmişi</b>'ni açın. Her kayıtta kaç dosyanın gönderildiği, toplam boyut ve sürenin ne kadar tuttuğu görünür. Kaydı rapor olarak da paylaşabilirsiniz.</p>
+                        <p>Geçmişin ne kadar süre saklanacağını <b>Ayarlar › Geçmiş Saklama</b>'dan seçin.</p>
+                    </section>
+
+                    <section id="extra-protection" class="docs-section">
+                        <h2>Ek koruma</h2>
+                        <ul>
+                        <li><b>Yüklemeleri doğrula</b>: her dosyanın sunucuya eksiksiz ulaştığını kontrol eder.</li>
+                        <li><b>Gerekirse iCloud öğelerini indir</b>: yalnızca iCloud'da duran fotoğraf ve videoları da yedekler.</li>
+                        <li><b>SFTP</b>: BackupFlow sunucunuzu ilk bağlantıda tanır ve kimliği değişirse sizi uyarır.</li>
+                        </ul>
+                    </section>
+
+                    <section id="troubleshooting" class="docs-section">
+                        <h2>Sorun giderme</h2>
+                        <dl>
+                        <dt>Sunucuma bağlanamıyorum.</dt><dd>Adresi, portu, kullanıcı adını ve parolayı kontrol edin. Genel portlar: FTP 21, SFTP 22, WebDAV 443. Sunucu evdeyse iPhone'unuzun aynı Wi-Fi ağında olduğundan ve <b>iPhone Ayarlar › Gizlilik ve Güvenlik › Yerel Ağ</b>'da erişimin açık olduğundan emin olun.</dd>
+                        <dt>Zamanlanmış yedek çalışmadı.</dt><dd>Görevin koşullarını (Wi-Fi, güç, saat aralığı, pil) kontrol edin ve BackupFlow bildirimlerine izin verildiğinden emin olun. Bekleyen bir yedeği başlatmak için uygulamayı açın.</dd>
+                        <dt>Bazı fotoğraflar eksik.</dt><dd><b>Gerekirse iCloud öğelerini indir</b>'i açın. iCloud Fotoğrafları kullanıyorsanız birçok orijinal yalnızca iCloud'da durur.</dd>
+                        <dt>Sunucumdaki dosyalar kayboldu.</dt><dd>Görev büyük olasılıkla <b>Ayna</b> modunda. <b>Sadece ekle</b> veya <b>Arşivli silme</b>'ye geçin.</dd>
+                        <dt>SFTP güvenlik uyarısı görüyorum.</dt><dd>Sunucunun kimliği değişmiş. Sunucu yeniden kurulduysa ya da değiştirildiyse bu normaldir. Değilse devam etmeden önce sunucuyu yöneten kişiye danışın.</dd>
+                        </dl>
+                    </section>
+
+                    <section id="privacy" class="docs-section">
+                        <h2>Gizlilik</h2>
+                        <p>Dosyalarınız doğrudan iPhone'unuzdan kendi sunucunuza gider. BackupFlow'un kendi sunucusu yoktur, dosyalarınızı asla görmez ve hiçbir veri toplamaz. Parolalar cihazınızda güvenli şekilde saklanır.</p>
+                        <p><b>Ayarlar › Tüm Verileri Sıfırla</b>, tüm görevleri, geçmişi ve kayıtlı parolaları bu cihazdan siler. Sunucularınızdaki dosyalara dokunulmaz.</p>
+                    </section>
+
+                    <section id="help" class="docs-section">
+                        <h2>Yardım mı lazım?</h2>
+                        <p>Bize e-posta göndermek için <b>Ayarlar › Destek İletişim</b>'e gidin. Uygulama sürümü ve cihaz modeli otomatik olarak eklenir.</p>
+                    </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <img src="../../web_logo.png" alt="" class="logo-image" />
+                            </div>
+                            <span class="logo-text">BackupFlow</span>
+                        </div>
+                        <p class="footer-description">Yerel öncelikli gizlilik ve akıllı otomasyona sahip profesyonel iOS yedekleme çözümü.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Destek</h4>
+                            <a href="./">Dokümantasyon</a>
+                            <a href="../../privacy-policy.html">Gizlilik Politikası</a>
+                            <a href="mailto:tamersavasci@icloud.com">İletişim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 BackupFlow. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../docs.js"></script>
+    </body>
+</html>

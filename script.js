@@ -121,6 +121,11 @@ function initI18n() {
       btn.classList.toggle("active", isActive);
     });
 
+    // Point Documentation links at the Help page in the current language.
+    document.querySelectorAll("[data-docs-link]").forEach((link) => {
+      link.setAttribute("href", `docs/${meta.code}/`);
+    });
+
     try {
       localStorage.setItem(STORAGE_KEY, meta.code);
     } catch (e) {
