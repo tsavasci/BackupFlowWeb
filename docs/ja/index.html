@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BackupFlow ヘルプ</title>
-        <meta name="description" content="BackupFlowは、iPhoneの写真・ビデオ・ファイルを自分のサーバー（NAS、自宅サーバー、個人クラウド）にバックアップします。サブスクリプションも他社クラウドも不要です。" />
+        <title>BackupFlow ヘルプ＆ドキュメント</title>
+        <meta name="description" content="iOS版 BackupFlow 完全ガイド：バックアップハブ、FTP/SFTP/WebDAV設定、写真ライブラリとファイルのバックアップ、スケジュール、削除ポリシー、チェックサム検証、トラブルシューティング。" />
         <meta name="theme-color" content="#3B82F6" />
         <link rel="canonical" href="https://tsavasci.github.io/BackupFlowWeb/docs/ja/" />
         <link rel="alternate" hreflang="en" href="https://tsavasci.github.io/BackupFlowWeb/docs/en/" />
@@ -93,115 +93,167 @@
             <div class="container">
                 <header class="docs-hero">
                     <h1>BackupFlow ヘルプ</h1>
-                    <p class="docs-lead">BackupFlowは、iPhoneの写真・ビデオ・ファイルを自分のサーバー（NAS、自宅サーバー、個人クラウド）にバックアップします。サブスクリプションも他社クラウドも不要です。</p>
+                    <p class="docs-lead">BackupFlowは、iPhoneの写真・ビデオ・ファイルをFTP、SFTP、またはWebDAV経由でご自身のサーバー（NAS、自宅サーバー、プライベートクラウド）へ直接バックアップします。サブスクリプションも他社クラウドも不要です。</p>
                 </header>
 
                 <div class="docs-layout">
                     <aside class="docs-toc" aria-labelledby="docs-toc-title">
                         <p class="docs-toc-title" id="docs-toc-title">このページの内容</p>
                         <ol>
-                        <li><a href="#what-you-need">必要なもの</a></li>
-                        <li><a href="#first-backup">最初のバックアップを設定する</a></li>
-                        <li><a href="#automatic-backups">自動バックアップ</a></li>
-                        <li><a href="#deleted-files">削除したファイルの扱い</a></li>
-                        <li><a href="#background">バックグラウンドでのバックアップ</a></li>
-                        <li><a href="#history">バックアップ履歴</a></li>
-                        <li><a href="#extra-protection">さらなる保護</a></li>
-                        <li><a href="#troubleshooting">困ったときは</a></li>
-                        <li><a href="#privacy">プライバシー</a></li>
-                        <li><a href="#help">お問い合わせ</a></li>
+                        <li><a href="#what-you-need">1. 必要なもの</a></li>
+                        <li><a href="#backup-hub">2. バックアップハブの概要</a></li>
+                        <li><a href="#first-backup">3. 新しいバックアップを作成する</a></li>
+                        <li><a href="#task-details">4. タスクの詳細と管理</a></li>
+                        <li><a href="#automatic-backups">5. スケジュールと実行条件</a></li>
+                        <li><a href="#deleted-files">6. 削除ポリシー・チェックサム・iCloud</a></li>
+                        <li><a href="#background">7. バックグラウンドでのバックアップ</a></li>
+                        <li><a href="#history">8. バックアップ履歴</a></li>
+                        <li><a href="#settings">9. アプリ設定</a></li>
+                        <li><a href="#troubleshooting">10. 困ったときは</a></li>
+                        <li><a href="#privacy">11. プライバシーとセキュリティ</a></li>
+                        <li><a href="#help">12. お問い合わせ</a></li>
                         </ol>
                     </aside>
 
                     <article class="docs-content">
                     <section id="what-you-need" class="docs-section">
-                        <h2>必要なもの</h2>
+                        <h2>1. 必要なもの</h2>
                         <ul>
-                        <li><b>FTP</b>、<b>SFTP</b>、<b>WebDAV</b>のいずれかに対応したサーバー。多くのNAS（SynologyやQNAPなど）やNextcloudなどの個人クラウドは、少なくとも1つに対応しています。</li>
-                        <li>サーバーのアドレス、ユーザー名、パスワード。</li>
-                        <li>サーバーが自宅のネットワークにある場合は、iOSからローカルネットワークへのアクセスを求められたときに<b>許可</b>をタップしてください。</li>
+                        <li><b>対応サーバー</b>：<b>FTP</b>、<b>SFTP（SSH）</b>、または<b>WebDAV（HTTP/HTTPS）</b>に対応したNAS（Synology、QNAP、TrueNAS、Unraidなど）、自宅サーバー、または個人クラウド（Nextcloud、ownCloud、WebDAVストレージ）。</li>
+                        <li><b>接続情報</b>：サーバーアドレス、ポート番号（標準：FTP <b>21</b>、SFTP <b>22</b>、WebDAV <b>443</b>/<b>80</b>）、<b>ユーザー名</b>と<b>パスワード</b>（FTPは匿名ログインも可）。</li>
+                        <li><b>iOSの権限</b>：<b>写真</b>へのフルアクセス、自宅ネットワーク内サーバー用の<b>ローカルネットワーク</b>権限、および<b>通知</b>。</li>
                         </ul>
+                    </section>
+
+                    <section id="backup-hub" class="docs-section">
+                        <h2>2. バックアップハブの概要</h2>
+                        <p>アプリを開くと、<b>バックアップハブ</b>にバックアップシステムの状態がリアルタイムで表示されます：</p>
+                        <ul>
+                        <li><b>ステータスカード</b>：前回の同期日時、次のタスクの時刻と名前、保護ステータス、サーバーアドレス、そして今すぐバックアップを開始できる緑色の<b>再生（▶）</b>ボタンが表示されます。</li>
+                        <li><b>バックアップの健全性</b>：成功率（％と実行回数）、連続失敗回数、前回の成功日時、平均所要時間を表示します。</li>
+                        <li><b>保存済みサーバー</b>：設定済みの<b>FTP</b>、<b>SFTP</b>、<b>WebDAV</b>タスクがカード表示され、<b>編集（✏️）</b>や<b>削除（🗑️）</b>がすぐに行えます。カードをタップすると<b>タスクの詳細</b>が開きます。</li>
+                        <li><b>下部バーと設定</b>：画面下部の3つのボタンから<b>同期・実行（🔄）</b>、<b>バックアップ履歴（🕒）</b>、<b>新しいバックアップ（+）</b>にアクセスできます。右上の<b>歯車アイコン（⚙️）</b>で<b>設定</b>を開きます。</li>
+                        </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/ja/1.jpg" width="300" height="649" loading="lazy" decoding="async" alt="2. バックアップハブの概要" /></figure>
+                        </div>
                     </section>
 
                     <section id="first-backup" class="docs-section">
-                        <h2>最初のバックアップを設定する</h2>
+                        <h2>3. 新しいバックアップを作成する</h2>
+                        <p><b>バックアップハブ</b>下部の<b>+</b>ボタン（または<b>保存済みサーバー</b>横の<b>追加</b>）をタップして<b>新しいバックアップ</b>画面を開きます：</p>
                         <ol>
-                        <li><b>バックアップハブ</b>で、<b>保存済みサーバー</b>の横にある<b>追加</b>をタップします。</li>
-                        <li>接続の種類（FTP、SFTP、WebDAV）を選び、サーバーのアドレス、ユーザー名、パスワードを入力します。</li>
-                        <li><b>接続をテスト</b>をタップして、設定が正しいか確認します。</li>
-                        <li><b>ソース</b>で<b>写真ライブラリ</b>（写真、ビデオ、または両方）を選ぶか、<b>フォルダを選択</b>をタップして「ファイル」アプリのフォルダを選びます。</li>
-                        <li>サーバー上の<b>宛先フォルダ</b>を入力するか、<b>リモートフォルダを参照</b>をタップして選びます。</li>
-                        <li>スケジュールを選んで<b>タスクを保存</b>をタップします。最初のバックアップをすぐに開始するか確認されます。</li>
+                        <li><b>ソース</b>：<b>写真ライブラリ</b>（写真のみ、ビデオのみ、または両方）を選ぶか、<b>フォルダを選択</b>をタップしてiOSの「ファイル」アプリからフォルダを選びます。</li>
+                        <li><b>ターゲットタイプ</b>：<b>FTP</b>、<b>SFTP</b>、<b>WebDAV</b>から選択し、サーバーアドレス、ポート、<b>ユーザー名</b>、<b>パスワード</b>、リモートパス（例：<code>/remote.php/dav/files/</code>）を入力します。<b>接続をテスト</b>で確認し、必要に応じて<b>リモートフォルダを参照</b>から保存先フォルダを選択します。</li>
+                        <li><b>スケジュール</b>：<b>手動</b>、<b>毎日</b>、<b>毎週</b>、<b>毎月</b>、<b>間隔</b>から選び、<b>時間を選択</b>で実行時刻を設定します。</li>
+                        <li><b>バックアップ動作</b>：<b>削除ポリシー</b>、<b>チェックサム</b>、実行条件を設定してタスクを保存します。</li>
                         </ol>
-                        <p>最初のバックアップ以降は、新しいファイルや変更されたファイルだけが送信されるため、次回からはずっと速くなります。</p>
+                        <p>初回のフルバックアップ完了後は、新しく追加・変更されたファイルのみが転送されるため、2回目以降は大幅に高速化されます。</p>
+                        <div class="docs-screens docs-screens-pair">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/ja/6.jpg" width="300" height="649" loading="lazy" decoding="async" alt="3. 新しいバックアップを作成する" /></figure>
+                            <figure class="docs-screen-card"><img src="../../assets/screens/ja/9.jpg" width="300" height="649" loading="lazy" decoding="async" alt="3. 新しいバックアップを作成する" /></figure>
+                        </div>
+                    </section>
+
+                    <section id="task-details" class="docs-section">
+                        <h2>4. タスクの詳細と管理</h2>
+                        <p><b>保存済みサーバー</b>のカードをタップすると<b>タスクの詳細</b>が開きます：</p>
+                        <ul>
+                        <li><b>一般</b>：ソース、現在のステータス（準備完了など）、スケジュール、<b>削除ポリシー</b>、<b>チェックサム</b>設定を確認できます。</li>
+                        <li><b>サーバー</b>：サーバーアドレス、ポート、ユーザー名を確認できます。</li>
+                        <li><b>最近のバックアップ</b>：このタスクの直近の実行履歴（日時、ステータス、ファイル数、サイズ、所要時間）を確認できます。</li>
+                        <li>左上の<b>編集</b>をタップすると設定を変更できます。</li>
+                        </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/ja/5.jpg" width="300" height="649" loading="lazy" decoding="async" alt="4. タスクの詳細と管理" /></figure>
+                        </div>
                     </section>
 
                     <section id="automatic-backups" class="docs-section">
-                        <h2>自動バックアップ</h2>
-                        <p>バックアップの頻度を選びます：<b>手動</b>、<b>数時間ごと</b>、<b>毎日</b>、<b>毎週</b>、<b>毎月</b>。</p>
-                        <p>バックアップを実行してよい条件も設定できます：</p>
+                        <h2>5. スケジュールと実行条件</h2>
+                        <p><b>スケジュール</b>では<b>手動</b>、<b>毎日</b>、<b>毎週</b>、<b>毎月</b>、<b>間隔</b>を選択でき、<b>時間を選択</b>で時刻を指定できます。</p>
+                        <p><b>バックアップ動作</b>では自動バックアップの実行条件を制限できます：</p>
                         <ul>
-                        <li><b>Wi-Fiが必要</b>：モバイルデータ通信を使いません。</li>
-                        <li><b>外部電源が必要</b>：iPhoneの充電中だけ実行します。</li>
-                        <li><b>許可された時間帯を使用</b>：たとえば夜間だけ。</li>
-                        <li><b>最小バッテリー残量</b>（<b>設定 › バッテリー設定</b>）：バッテリー残量が少ないときはスキップします。</li>
+                        <li><b>Wi-Fiが必要</b>：モバイルデータ通信を一切使用しません。</li>
+                        <li><b>外部電源が必要</b>：iPhoneの充電中のみ実行します。</li>
+                        <li><b>許可された時間帯を使用</b>：夜間など指定した時間帯にのみ自動バックアップを実行します。</li>
+                        <li><b>最小バッテリー残量</b>（<b>設定 › バッテリー設定</b>）：バッテリー残量がしきい値未満のときはスキップします。</li>
                         </ul>
-                        <p>条件を満たしていない場合、バックアップは待機し、条件がそろうと開始します。タスクをしばらく止めたいときは、タスクを開いて<b>スケジュールを一時停止</b>をタップします。</p>
                     </section>
 
                     <section id="deleted-files" class="docs-section">
-                        <h2>削除したファイルの扱い</h2>
-                        <p><b>削除ポリシー</b>で、iPhoneで何かを削除したときにサーバー側でどうするかを選びます：</p>
+                        <h2>6. 削除ポリシー・チェックサム・iCloud</h2>
+                        <p><b>バックアップ動作</b>では、iPhoneで削除したファイルのサーバー側での扱いと整合性チェックを設定できます：</p>
                         <dl>
-                        <dt>ミラー（デフォルト）</dt><dd>サーバーはソースとまったく同じ状態に保たれます。iPhoneで削除したファイルはサーバーからも削除されます。</dd>
-                        <dt>追加のみ</dt><dd>サーバーから何も削除されません。</dd>
-                        <dt>アーカイブ削除</dt><dd>何も削除されません。削除されたファイルは、サーバー上の日付付き<b>.backupflow_archive</b>フォルダに移動されます。</dd>
+                        <dt>削除ポリシー › 追加のみ</dt>
+                        <dd>サーバー上のファイルは一切削除されません。バックアップ後にiPhoneの写真・ビデオを消して空き容量を増やしたい場合は<b>このモードを推奨します</b>。</dd>
+                        <dt>削除ポリシー › ミラー</dt>
+                        <dd>サーバーのフォルダをiPhoneのソースと完全に同じ状態に保ちます。iPhoneで削除したファイルは次回同期時にサーバーからも削除されます。</dd>
+                        <dt>削除ポリシー › アーカイブ削除</dt>
+                        <dd>iPhoneで削除されたファイルは完全には消去されず、サーバー上の日付付き<b>.backupflow_archive</b>フォルダに移動されます。</dd>
+                        <dt>チェックサム (Checksum)</dt>
+                        <dd>アップロード後に各ファイルが破損なくサーバーに届いたか検証します（最高速度のため初期設定は<b>オフ</b>）。</dd>
                         </dl>
-                        <p class="note">バックアップ後にiPhoneの空き容量を増やすつもりなら、何かを削除する前に<b>追加のみ</b>または<b>アーカイブ削除</b>に切り替えてください。</p>
+                        <p class="note"><b>iCloud写真のヒント：</b>「iPhoneのストレージを最適化」をお使いの場合は、<b>必要に応じてiCloud項目をダウンロード</b>をオンにすることで、iCloud上にのみあるオリジナル写真・ビデオもバックアップできます。</p>
                     </section>
 
                     <section id="background" class="docs-section">
-                        <h2>バックグラウンドでのバックアップ</h2>
-                        <p>アプリがバックグラウンドで動作するタイミングはiOSが決めるため、予定したバックアップが指定した分ちょうどに始まらないことがあります。時間になると、BackupFlowがバックアップを開始するか通知を送ります。<b>今すぐ開始</b>をタップすると始まります。</p>
-                        <p>iOSによってバックアップが途中で止められた場合は、BackupFlowを開くと続きから再開します。送信済みのファイルはスキップされます。</p>
-                        <p>最初の大きなバックアップは、iPhoneをWi-Fiと電源につないだまま行ってください。</p>
+                        <h2>7. バックグラウンドでのバックアップ</h2>
+                        <p>BackupFlowはiOSの<b>BGTaskScheduler</b>と連携してスケジュールされたバックアップを実行します。iOSがバッテリー残量や使用状況に応じて実行タイミングを調整するため、指定時刻より少し後に開始されたり通知が届いたりすることがあります。</p>
+                        <p>iOSによって途中で一時停止された場合でも、アプリを開けば続きから再開され、転送済みのファイルはスキップされます。初回の大量バックアップ時はiPhoneをWi-Fiと充電器に接続したままにしてください。</p>
                     </section>
 
                     <section id="history" class="docs-section">
-                        <h2>バックアップ履歴</h2>
-                        <p>最近のバックアップは<b>バックアップハブ</b>に表示されます。<b>すべて表示</b>をタップすると<b>バックアップ履歴</b>全体を確認できます。各項目には送信したファイル数、合計サイズ、所要時間が表示され、レポートとして共有することもできます。</p>
-                        <p>履歴の保存期間は<b>設定 › 履歴保持期間</b>で選べます。</p>
+                        <h2>8. バックアップ履歴</h2>
+                        <p><b>バックアップハブ</b>下部バー中央の<b>履歴（🕒）</b>ボタンをタップして<b>バックアップ履歴</b>を開きます：</p>
+                        <ul>
+                        <li><b>サマリーカード</b>：完了数、失敗数、累計転送データ量（GB/MB）を上部に表示します。</li>
+                        <li><b>詳細ログ</b>：各カードにタスク名、日時、完了バッジ、ファイル数（例：<code>1236/1236</code>）、転送サイズ、所要時間が表示されます。右上の<b>ゴミ箱アイコン（🗑️）</b>で履歴を消去できます。</li>
+                        </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/ja/3.jpg" width="300" height="649" loading="lazy" decoding="async" alt="8. バックアップ履歴" /></figure>
+                        </div>
                     </section>
 
-                    <section id="extra-protection" class="docs-section">
-                        <h2>さらなる保護</h2>
+                    <section id="settings" class="docs-section">
+                        <h2>9. アプリ設定</h2>
+                        <p><b>バックアップハブ</b>右上の<b>歯車アイコン（⚙️）</b>から<b>設定</b>を開きます：</p>
                         <ul>
-                        <li><b>アップロードを検証</b>：すべてのファイルが正しくサーバーに届いたか確認します。</li>
-                        <li><b>必要に応じてiCloud項目をダウンロード</b>：iCloudにのみ保存されている写真やビデオもバックアップします。</li>
-                        <li><b>SFTP</b>：最初の接続時にサーバーを記憶し、サーバーの識別情報が変わった場合は警告します。</li>
+                        <li><b>履歴保持期間（日）</b>：履歴を保存する日数（例：<b>30日間</b>）を選択します。</li>
+                        <li><b>外部電源が必要</b>と<b>バッテリー設定</b>：電源およびバッテリー残量の全体ルールを設定します。</li>
+                        <li><b>言語</b>：対応する12言語からアプリの表示言語をいつでも切り替えられます。</li>
+                        <li><b>情報</b>：アプリの<b>バージョン</b>確認、<b>アプリを評価</b>、<b>サポートに連絡</b>が行えます。</li>
+                        <li><b>すべてのデータをリセット</b>：このiPhoneからすべてのタスク、履歴、保存済みパスワードを削除します（サーバー上のファイルは削除されません）。</li>
                         </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/ja/10.jpg" width="300" height="649" loading="lazy" decoding="async" alt="9. アプリ設定" /></figure>
+                        </div>
                     </section>
 
                     <section id="troubleshooting" class="docs-section">
-                        <h2>困ったときは</h2>
+                        <h2>10. 困ったときは</h2>
                         <dl>
-                        <dt>サーバーに接続できない</dt><dd>アドレス、ポート、ユーザー名、パスワードを確認してください。一般的なポート：FTP 21、SFTP 22、WebDAV 443。自宅のサーバーの場合は、iPhoneが同じWi-Fiにつながっていること、<b>iPhoneの設定 › プライバシーとセキュリティ › ローカルネットワーク</b>でアクセスがオンになっていることを確認してください。</dd>
-                        <dt>予定したバックアップが実行されなかった</dt><dd>タスクの条件（Wi-Fi、電源、時間帯、バッテリー）と、BackupFlowの通知が許可されているかを確認してください。待機中のバックアップはアプリを開くと開始できます。</dd>
-                        <dt>一部の写真がない</dt><dd><b>必要に応じてiCloud項目をダウンロード</b>をオンにしてください。iCloud写真を使っている場合、多くのオリジナルはiCloudにのみ保存されています。</dd>
-                        <dt>サーバーからファイルが消えた</dt><dd>タスクが<b>ミラー</b>に設定されている可能性があります。<b>追加のみ</b>または<b>アーカイブ削除</b>に切り替えてください。</dd>
-                        <dt>SFTPのセキュリティ警告が表示される</dt><dd>サーバーの識別情報が変わりました。サーバーを再インストールしたり交換したりした場合は想定どおりです。そうでない場合は、続ける前にサーバーの管理者に確認してください。</dd>
+                        <dt>サーバーに接続できない</dt>
+                        <dd>アドレス、ポート（FTP 21、SFTP 22、WebDAV 443/80）、ユーザー名、パスワードを確認してください。自宅サーバーの場合は同じWi-Fiに接続し、<b>iPhoneの設定 › プライバシーとセキュリティ › ローカルネットワーク › BackupFlow</b>がオンになっているか確認してください。</dd>
+                        <dt>予定したバックアップが実行されない</dt>
+                        <dd><b>バックアップ動作</b>の条件（Wi-Fi、外部電源、時間帯、バッテリー）と通知の許可を確認してください。</dd>
+                        <dt>一部の写真が含まれない</dt>
+                        <dd>写真への「フルアクセス」を許可し、<b>必要に応じてiCloud項目をダウンロード</b>をオンにしてください。</dd>
+                        <dt>サーバーからファイルが消えた</dt>
+                        <dd>タスクの<b>削除ポリシー</b>を<b>ミラー</b>から<b>追加のみ</b>または<b>アーカイブ削除</b>に変更してください。</dd>
+                        <dt>SFTPのセキュリティ警告が表示される</dt>
+                        <dd>サーバーのSSHフィンガープリントが変更されました。サーバーの再インストールや交換時は正常ですが、それ以外は管理者に確認してください。</dd>
                         </dl>
                     </section>
 
                     <section id="privacy" class="docs-section">
-                        <h2>プライバシー</h2>
-                        <p>ファイルはiPhoneから自分のサーバーへ直接送られます。BackupFlowは独自のサーバーを持たず、ファイルを見ることもデータを収集することもありません。パスワードはデバイスに安全に保存されます。</p>
-                        <p><b>設定 › すべてのデータをリセット</b>を使うと、このデバイスからすべてのタスク、履歴、保存済みパスワードが削除されます。サーバー上のファイルには影響しません。</p>
+                        <h2>11. プライバシーとセキュリティ</h2>
+                        <p>ファイルはiPhoneからご自身のサーバーへ直接転送されます。BackupFlowは独自のサーバーを持たず、ファイルを見ることも分析・追跡データを収集することもありません。パスワードは<b>iOSキーチェーン（Keychain）</b>に暗号化して保存されます。詳細は<a href="../../privacy-policy.html">プライバシーポリシー</a>をご覧ください。</p>
                     </section>
 
                     <section id="help" class="docs-section">
-                        <h2>お問い合わせ</h2>
-                        <p><b>設定 › サポートに連絡</b>からメールをお送りください。アプリのバージョンとデバイスのモデルは自動的に追加されます。</p>
+                        <h2>12. お問い合わせ</h2>
+                        <p>アプリ内の<b>設定 › サポートに連絡</b>（または <a href="mailto:tamersavasci@icloud.com">tamersavasci@icloud.com</a>）からメールをお送りください。アプリのバージョンとデバイスモデルが自動的に添付されます。</p>
                     </section>
                     </article>
                 </div>
@@ -224,7 +276,7 @@
                         <div class="footer-column">
                             <h4>サポート</h4>
                             <a href="./">ドキュメント</a>
-                            <a href="../../privacy-policy.html">プライバシーポリシー</a>
+                            <a href="../../privacy-policy.html?lang=ja">プライバシーポリシー</a>
                             <a href="mailto:tamersavasci@icloud.com">お問い合わせ</a>
                         </div>
                     </div>

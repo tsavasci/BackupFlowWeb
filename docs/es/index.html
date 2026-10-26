@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ayuda de BackupFlow</title>
-        <meta name="description" content="BackupFlow copia las fotos, vídeos y archivos de tu iPhone en tu propio servidor: un NAS, un servidor doméstico o tu nube personal. Sin suscripciones y sin nubes de terceros." />
+        <title>Ayuda y Documentación de BackupFlow</title>
+        <meta name="description" content="Guía completa de BackupFlow para iOS: Centro de copias, configuración FTP/SFTP/WebDAV, copia de Biblioteca de fotos y Archivos, programación, políticas de eliminación y solución de problemas." />
         <meta name="theme-color" content="#3B82F6" />
         <link rel="canonical" href="https://tsavasci.github.io/BackupFlowWeb/docs/es/" />
         <link rel="alternate" hreflang="en" href="https://tsavasci.github.io/BackupFlowWeb/docs/en/" />
@@ -93,115 +93,167 @@
             <div class="container">
                 <header class="docs-hero">
                     <h1>Ayuda de BackupFlow</h1>
-                    <p class="docs-lead">BackupFlow copia las fotos, vídeos y archivos de tu iPhone en tu propio servidor: un NAS, un servidor doméstico o tu nube personal. Sin suscripciones y sin nubes de terceros.</p>
+                    <p class="docs-lead">BackupFlow copia las fotos, vídeos y archivos de tu iPhone directamente en tu propio servidor — un NAS, servidor doméstico o nube personal — mediante FTP, SFTP o WebDAV. Sin suscripciones ni nubes de terceros.</p>
                 </header>
 
                 <div class="docs-layout">
                     <aside class="docs-toc" aria-labelledby="docs-toc-title">
                         <p class="docs-toc-title" id="docs-toc-title">En esta página</p>
                         <ol>
-                        <li><a href="#what-you-need">Qué necesitas</a></li>
-                        <li><a href="#first-backup">Configura tu primera copia</a></li>
-                        <li><a href="#automatic-backups">Copias automáticas</a></li>
-                        <li><a href="#deleted-files">Archivos eliminados</a></li>
-                        <li><a href="#background">Copias en segundo plano</a></li>
-                        <li><a href="#history">Historial de copias</a></li>
-                        <li><a href="#extra-protection">Protección extra</a></li>
-                        <li><a href="#troubleshooting">Solución de problemas</a></li>
-                        <li><a href="#privacy">Privacidad</a></li>
-                        <li><a href="#help">¿Necesitas ayuda?</a></li>
+                        <li><a href="#what-you-need">1. Qué necesitas</a></li>
+                        <li><a href="#backup-hub">2. Vista general del Centro de copias</a></li>
+                        <li><a href="#first-backup">3. Crear una nueva copia de seguridad</a></li>
+                        <li><a href="#task-details">4. Detalles y gestión de tareas</a></li>
+                        <li><a href="#automatic-backups">5. Programación y condiciones</a></li>
+                        <li><a href="#deleted-files">6. Política de eliminación, Suma de verificación e iCloud</a></li>
+                        <li><a href="#background">7. Copias en segundo plano</a></li>
+                        <li><a href="#history">8. Historial de copias</a></li>
+                        <li><a href="#settings">9. Ajustes de la aplicación</a></li>
+                        <li><a href="#troubleshooting">10. Solución de problemas</a></li>
+                        <li><a href="#privacy">11. Privacidad y seguridad</a></li>
+                        <li><a href="#help">12. ¿Necesitas ayuda?</a></li>
                         </ol>
                     </aside>
 
                     <article class="docs-content">
                     <section id="what-you-need" class="docs-section">
-                        <h2>Qué necesitas</h2>
+                        <h2>1. Qué necesitas</h2>
                         <ul>
-                        <li>Un servidor compatible con <b>FTP</b>, <b>SFTP</b> o <b>WebDAV</b>. La mayoría de los NAS (como Synology o QNAP) y nubes personales como Nextcloud admiten al menos uno.</li>
-                        <li>La dirección del servidor, un nombre de usuario y una contraseña.</li>
-                        <li>Si el servidor está en tu red doméstica, toca <b>Permitir</b> cuando iOS pida acceso a la red local.</li>
+                        <li><b>Un servidor compatible</b>: Cualquier NAS (Synology, QNAP, TrueNAS, Unraid), servidor doméstico o nube personal (Nextcloud, ownCloud, WebDAV) compatible con <b>FTP</b>, <b>SFTP (SSH)</b> o <b>WebDAV (HTTP/HTTPS)</b>.</li>
+                        <li><b>Datos de acceso</b>: Dirección del servidor, puerto (FTP <b>21</b>, SFTP <b>22</b>, WebDAV <b>443</b>/<b>80</b>), <b>Nombre de usuario</b> y <b>Contraseña</b> (o inicio anónimo para FTP).</li>
+                        <li><b>Permisos de iOS</b>: Acceso completo a <b>Fotos</b>, acceso a <b>Red local</b> (si el servidor está en tu red doméstica) y <b>Notificaciones</b>.</li>
                         </ul>
+                    </section>
+
+                    <section id="backup-hub" class="docs-section">
+                        <h2>2. Vista general del Centro de copias</h2>
+                        <p>Al abrir BackupFlow, el <b>Centro de copias</b> muestra en tiempo real el estado de tus copias de seguridad:</p>
+                        <ul>
+                        <li><b>Tarjeta de estado</b>: Muestra la última sincronización, la hora de la próxima tarea, el estado de protección, la dirección del servidor y el botón verde <b>Reproducir (▶)</b> para iniciar una copia al instante.</li>
+                        <li><b>Salud de las copias</b>: Muestra el porcentaje de éxito, los fallos consecutivos, la fecha de la última copia exitosa y la duración media.</li>
+                        <li><b>Servidores guardados</b>: Tarjetas para tus tareas <b>FTP</b>, <b>SFTP</b> y <b>WebDAV</b> con botones rápidos para <b>Editar (✏️)</b> o <b>Eliminar (🗑️)</b>. Toca cualquier tarjeta para abrir los <b>Detalles de la tarea</b>.</li>
+                        <li><b>Barra inferior y Ajustes</b>: Usa los tres botones inferiores para <b>Sincronizar (🔄)</b>, abrir el <b>Historial de copias (🕒)</b> o crear una <b>Nueva copia de seguridad (+)</b>. El icono de <b>engranaje (⚙️)</b> arriba a la derecha abre <b>Ajustes</b>.</li>
+                        </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/es/1.jpg" width="300" height="649" loading="lazy" decoding="async" alt="2. Vista general del Centro de copias" /></figure>
+                        </div>
                     </section>
 
                     <section id="first-backup" class="docs-section">
-                        <h2>Configura tu primera copia</h2>
+                        <h2>3. Crear una nueva copia de seguridad</h2>
+                        <p>Toca el botón <b>+</b> en la parte inferior del <b>Centro de copias</b> (o <b>Añadir</b> junto a <b>Servidores guardados</b>) para abrir <b>Nueva copia de seguridad</b>:</p>
                         <ol>
-                        <li>En el <b>Centro de copias</b>, toca <b>Añadir</b> junto a <b>Servidores guardados</b>.</li>
-                        <li>Elige el tipo de conexión (FTP, SFTP o WebDAV) e introduce la dirección del servidor, el usuario y la contraseña.</li>
-                        <li>Toca <b>Probar conexión</b> para comprobar que todo es correcto.</li>
-                        <li>En <b>Origen</b>, elige <b>Biblioteca de fotos</b> (fotos, vídeos o ambos) o toca <b>Seleccionar carpeta</b> para elegir una carpeta de la app Archivos.</li>
-                        <li>Escribe una <b>Carpeta de destino</b> en el servidor o toca <b>Explorar carpeta remota</b> para elegirla.</li>
-                        <li>Elige una programación y toca <b>Guardar tarea</b>. BackupFlow te ofrecerá iniciar la primera copia al momento.</li>
+                        <li><b>Origen</b>: Elige <b>Biblioteca de fotos</b> (solo fotos, solo vídeos o ambos) o toca <b>Seleccionar carpeta</b> para elegir cualquier carpeta de la app <b>Archivos</b> de iOS.</li>
+                        <li><b>Tipo de destino</b>: Selecciona <b>FTP</b>, <b>SFTP</b> o <b>WebDAV</b>. Introduce la dirección del servidor, el puerto, el <b>Nombre de usuario</b>, la <b>Contraseña</b> y la ruta remota (ej. <code>/remote.php/dav/files/</code>). Toca <b>Probar conexión</b> y opcionalmente <b>Explorar carpeta remota</b> para elegir la carpeta en tu servidor.</li>
+                        <li><b>Programación</b>: Elige <b>Manual</b>, <b>Diario</b>, <b>Semanal</b>, <b>Mensual</b> o <b>Intervalo</b>, y define la hora en <b>Seleccionar hora</b>.</li>
+                        <li><b>Comportamiento de la copia</b>: Configura la <b>Política de eliminación</b>, la <b>Suma de verificación</b> y las condiciones de red/energía, y guarda la tarea.</li>
                         </ol>
-                        <p>Tras la primera copia, solo se envían los archivos nuevos o modificados, así que las siguientes son mucho más rápidas.</p>
+                        <p>Tras la primera copia completa, solo se envían los archivos nuevos o modificados, haciendo que las siguientes copias sean mucho más rápidas.</p>
+                        <div class="docs-screens docs-screens-pair">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/es/6.jpg" width="300" height="649" loading="lazy" decoding="async" alt="3. Crear una nueva copia de seguridad" /></figure>
+                            <figure class="docs-screen-card"><img src="../../assets/screens/es/9.jpg" width="300" height="649" loading="lazy" decoding="async" alt="3. Crear una nueva copia de seguridad" /></figure>
+                        </div>
+                    </section>
+
+                    <section id="task-details" class="docs-section">
+                        <h2>4. Detalles y gestión de tareas</h2>
+                        <p>Toca cualquier tarea en <b>Servidores guardados</b> para ver los <b>Detalles de la tarea</b>:</p>
+                        <ul>
+                        <li><b>General</b>: Revisa el origen, el estado actual, la programación, la <b>Política de eliminación</b> y la <b>Suma de verificación</b>.</li>
+                        <li><b>Servidor</b>: Consulta la dirección del servidor, el puerto y el usuario.</li>
+                        <li><b>Copias recientes</b>: Revisa las últimas ejecuciones de esa tarea con fecha, estado, archivos transferidos, tamaño y duración.</li>
+                        <li>Toca <b>Editar</b> arriba a la izquierda para modificar cualquier ajuste de la tarea.</li>
+                        </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/es/5.jpg" width="300" height="649" loading="lazy" decoding="async" alt="4. Detalles y gestión de tareas" /></figure>
+                        </div>
                     </section>
 
                     <section id="automatic-backups" class="docs-section">
-                        <h2>Copias automáticas</h2>
-                        <p>Elige con qué frecuencia se hace la copia: <b>Manual</b>, <b>Cada pocas horas</b>, <b>Diario</b>, <b>Semanal</b> o <b>Mensual</b>.</p>
-                        <p>También puedes decidir cuándo se permite hacerla:</p>
+                        <h2>5. Programación y condiciones</h2>
+                        <p>En <b>Programación</b> puedes elegir: <b>Manual</b>, <b>Diario</b>, <b>Semanal</b>, <b>Mensual</b> o <b>Intervalo</b>, ajustando la hora en <b>Seleccionar hora</b>.</p>
+                        <p>En <b>Comportamiento de la copia</b> puedes definir cuándo se permite ejecutar la copia automática:</p>
                         <ul>
-                        <li><b>Requiere Wi-Fi</b>: nunca usa datos móviles.</li>
-                        <li><b>Requiere alimentación externa</b>: solo mientras el iPhone se carga.</li>
-                        <li><b>Usar intervalo horario permitido</b>: por ejemplo, solo de noche.</li>
-                        <li><b>Nivel mínimo de batería</b> (en <b>Ajustes › Ajustes de batería</b>): omite copias con poca batería.</li>
+                        <li><b>Requiere Wi-Fi</b>: Evita el uso de datos móviles.</li>
+                        <li><b>Requiere alimentación externa</b>: Solo se ejecuta mientras el iPhone se está cargando.</li>
+                        <li><b>Usar intervalo horario permitido</b>: Limita las copias automáticas a una franja horaria (por ejemplo, de noche).</li>
+                        <li><b>Nivel mínimo de batería</b> (en <b>Ajustes › Ajustes de batería</b>): Omite la copia si la batería está baja.</li>
                         </ul>
-                        <p>Si no se cumple una condición, la copia espera y empieza en cuanto se cumpla. Para detener una tarea un tiempo, ábrela y toca <b>Pausar programación</b>.</p>
                     </section>
 
                     <section id="deleted-files" class="docs-section">
-                        <h2>Archivos eliminados</h2>
-                        <p>En <b>Política de eliminación</b>, elige qué pasa en el servidor cuando borras algo en el iPhone:</p>
+                        <h2>6. Política de eliminación, Suma de verificación e iCloud</h2>
+                        <p>En <b>Comportamiento de la copia</b> controlas qué ocurre en el servidor cuando borras archivos en el iPhone y cómo se verifican las subidas:</p>
                         <dl>
-                        <dt>Espejo (predeterminado)</dt><dd>El servidor es una copia exacta del origen. Los archivos que borras en el iPhone también se borran del servidor.</dd>
-                        <dt>Solo añadir</dt><dd>Nunca se borra nada del servidor.</dd>
-                        <dt>Archivado al borrar</dt><dd>No se borra nada. Los archivos eliminados se mueven a una carpeta <b>.backupflow_archive</b> con fecha en el servidor.</dd>
+                        <dt>Política de eliminación › Solo añadir</dt>
+                        <dd>Nunca se borra nada del servidor. <b>Recomendado</b> si planeas borrar fotos o vídeos del iPhone para liberar espacio después de hacer la copia.</dd>
+                        <dt>Política de eliminación › Espejo</dt>
+                        <dd>Mantiene la carpeta del servidor como una copia exacta del origen. Los archivos borrados en el iPhone también se eliminan del servidor.</dd>
+                        <dt>Política de eliminación › Archivado al borrar</dt>
+                        <dd>Los archivos eliminados en el iPhone se mueven a una carpeta con fecha <b>.backupflow_archive</b> en el servidor.</dd>
+                        <dt>Suma de verificación</dt>
+                        <dd>Comprueba que cada archivo llegue intacto al servidor tras la subida (por defecto <b>Desactivado</b> para máxima velocidad).</dd>
                         </dl>
-                        <p class="note">¿Piensas liberar espacio en el iPhone tras la copia? Cambia a <b>Solo añadir</b> o <b>Archivado al borrar</b> antes de borrar nada.</p>
+                        <p class="note"><b>Consejo para Fotos en iCloud:</b> Activa <b>Descargar elementos de iCloud si es necesario</b> para copiar también los originales que solo están almacenados en iCloud.</p>
                     </section>
 
                     <section id="background" class="docs-section">
-                        <h2>Copias en segundo plano</h2>
-                        <p>iOS decide cuándo pueden funcionar las apps en segundo plano, por lo que una copia programada puede no empezar en el minuto exacto. Cuando llega la hora, BackupFlow inicia la copia o envía una notificación. Toca <b>Iniciar ahora</b> para empezar.</p>
-                        <p>Si iOS detiene una copia antes de terminar, abre BackupFlow y continuará. Los archivos ya enviados se omiten.</p>
-                        <p>Para una primera copia grande, mantén el iPhone conectado al Wi-Fi y a la corriente.</p>
+                        <h2>7. Copias en segundo plano</h2>
+                        <p>BackupFlow utiliza <b>BGTaskScheduler</b> de iOS para ejecutar copias programadas en segundo plano. Dado que iOS decide el momento exacto según el uso y la batería, una tarea programada puede comenzar unos minutos después de la hora elegida o enviarte una notificación.</p>
+                        <p>Si iOS detiene una copia antes de terminar, abre BackupFlow y continuará automáticamente omitiendo los archivos ya enviados. Para una primera copia grande, mantén el iPhone conectado al Wi-Fi y a la corriente.</p>
                     </section>
 
                     <section id="history" class="docs-section">
-                        <h2>Historial de copias</h2>
-                        <p>Tus últimas copias aparecen en el <b>Centro de copias</b>. Toca <b>Ver todo</b> para abrir el <b>Historial de copias</b> completo. Cada entrada muestra cuántos archivos se enviaron, el tamaño total y la duración. También puedes compartirla como informe.</p>
-                        <p>Para elegir cuánto tiempo se guarda el historial, ve a <b>Ajustes › Retención de historial</b>.</p>
+                        <h2>8. Historial de copias</h2>
+                        <p>Toca el botón central <b>Historial (🕒)</b> en la barra inferior del <b>Centro de copias</b>:</p>
+                        <ul>
+                        <li><b>Tarjetas de resumen</b>: Consulta el total de copias completadas, fallidas y el total de datos transferidos (GB/MB).</li>
+                        <li><b>Registros detallados</b>: Cada entrada muestra el nombre de la tarea, la fecha, los archivos transferidos, el tamaño y la duración. Usa el icono de <b>papelera (🗑️)</b> arriba a la derecha para borrar el historial.</li>
+                        </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/es/3.jpg" width="300" height="649" loading="lazy" decoding="async" alt="8. Historial de copias" /></figure>
+                        </div>
                     </section>
 
-                    <section id="extra-protection" class="docs-section">
-                        <h2>Protección extra</h2>
+                    <section id="settings" class="docs-section">
+                        <h2>9. Ajustes de la aplicación</h2>
+                        <p>Toca el icono de <b>engranaje (⚙️)</b> arriba a la derecha en el <b>Centro de copias</b> para abrir <b>Ajustes</b>:</p>
                         <ul>
-                        <li><b>Verificar subidas</b>: comprueba que cada archivo llegó intacto al servidor.</li>
-                        <li><b>Descargar elementos de iCloud si es necesario</b>: copia también fotos y vídeos que solo están en iCloud.</li>
-                        <li><b>SFTP</b>: BackupFlow recuerda tu servidor en la primera conexión y te avisa si su identidad cambia.</li>
+                        <li><b>Retención de historial (días)</b>: Elige cuántos días se guarda el historial (ej. <b>30 días</b>).</li>
+                        <li><b>Requiere alimentación externa</b> y <b>Ajustes de batería</b>: Reglas globales de energía y nivel mínimo de batería.</li>
+                        <li><b>Idioma</b>: Cambia el idioma de la aplicación al instante entre los 12 idiomas disponibles.</li>
+                        <li><b>Acerca de</b>: Consulta la <b>Versión</b>, toca <b>Valorar aplicación</b> o <b>Contactar soporte</b>.</li>
+                        <li><b>Restablecer todos los datos</b>: Elimina todas las tareas, el historial y las contraseñas guardadas de este iPhone sin tocar los archivos de tus servidores.</li>
                         </ul>
+                        <div class="docs-screens">
+                            <figure class="docs-screen-card"><img src="../../assets/screens/es/10.jpg" width="300" height="649" loading="lazy" decoding="async" alt="9. Ajustes de la aplicación" /></figure>
+                        </div>
                     </section>
 
                     <section id="troubleshooting" class="docs-section">
-                        <h2>Solución de problemas</h2>
+                        <h2>10. Solución de problemas</h2>
                         <dl>
-                        <dt>No puedo conectar con mi servidor.</dt><dd>Revisa la dirección, el puerto, el usuario y la contraseña. Puertos habituales: FTP 21, SFTP 22, WebDAV 443. Si el servidor está en casa, asegúrate de que el iPhone está en la misma red Wi-Fi y de que el acceso está activado en <b>Ajustes del iPhone › Privacidad y seguridad › Red local</b>.</dd>
-                        <dt>Una copia programada no se ejecutó.</dt><dd>Revisa las condiciones de la tarea (Wi-Fi, corriente, franja horaria, batería) y que las notificaciones de BackupFlow estén permitidas. Abre la app para iniciar una copia pendiente.</dd>
-                        <dt>Faltan algunas fotos.</dt><dd>Activa <b>Descargar elementos de iCloud si es necesario</b>. Con Fotos en iCloud, muchos originales solo están en iCloud.</dd>
-                        <dt>Han desaparecido archivos de mi servidor.</dt><dd>Probablemente la tarea usa <b>Espejo</b>. Cámbiala a <b>Solo añadir</b> o <b>Archivado al borrar</b>.</dd>
-                        <dt>Veo un aviso de seguridad SFTP.</dt><dd>La identidad del servidor ha cambiado. Es normal si el servidor se reinstaló o se sustituyó. Si no, consulta con quien lo administra antes de continuar.</dd>
+                        <dt>No puedo conectar con mi servidor.</dt>
+                        <dd>Revisa la dirección, el puerto (FTP 21, SFTP 22, WebDAV 443/80), el usuario y la contraseña. Si el servidor está en casa, asegúrate de que el iPhone está en el mismo Wi-Fi y de que el permiso está activo en <b>Ajustes del iPhone › Privacidad y seguridad › Red local › BackupFlow</b>.</dd>
+                        <dt>Una copia programada no se ejecutó.</dt>
+                        <dd>Revisa las condiciones en <b>Comportamiento de la copia</b> (Wi-Fi, alimentación, intervalo horario, batería) y los permisos de notificaciones.</dd>
+                        <dt>Faltan algunas fotos.</dt>
+                        <dd>Concede acceso completo a Fotos y activa <b>Descargar elementos de iCloud si es necesario</b>.</dd>
+                        <dt>Han desaparecido archivos de mi servidor.</dt>
+                        <dd>Cambia la <b>Política de eliminación</b> de la tarea de <b>Espejo</b> a <b>Solo añadir</b> o <b>Archivado al borrar</b>.</dd>
+                        <dt>Aviso de seguridad SFTP.</dt>
+                        <dd>La huella SSH del servidor ha cambiado. Es normal si reinstalaste o cambiaste el servidor; de lo contrario, consulta con el administrador.</dd>
                         </dl>
                     </section>
 
                     <section id="privacy" class="docs-section">
-                        <h2>Privacidad</h2>
-                        <p>Tus archivos van directamente del iPhone a tu propio servidor. BackupFlow no tiene servidores propios, nunca ve tus archivos y no recopila datos. Las contraseñas se guardan de forma segura en tu dispositivo.</p>
-                        <p><b>Ajustes › Restablecer todos los datos</b> elimina todas las tareas, el historial y las contraseñas guardadas de este dispositivo. Los archivos de tus servidores no se tocan.</p>
+                        <h2>11. Privacidad y seguridad</h2>
+                        <p>Tus archivos van directamente desde tu iPhone a tu propio servidor. BackupFlow no tiene servidores propios, nunca ve tus archivos y no recopila datos ni estadísticas. Las contraseñas se guardan cifradas en el <b>Llavero de iOS (Keychain)</b>. Consulta nuestra <a href="../../privacy-policy.html">Política de privacidad</a> completa.</p>
                     </section>
 
                     <section id="help" class="docs-section">
-                        <h2>¿Necesitas ayuda?</h2>
-                        <p>Ve a <b>Ajustes › Contactar soporte</b> para enviarnos un correo. La versión de la app y el modelo del dispositivo se añaden automáticamente.</p>
+                        <h2>12. ¿Necesitas ayuda?</h2>
+                        <p>Ve a <b>Ajustes › Contactar soporte</b> dentro de la app (o escribe a <a href="mailto:tamersavasci@icloud.com">tamersavasci@icloud.com</a>). La versión de la app y el modelo del dispositivo se adjuntan automáticamente.</p>
                     </section>
                     </article>
                 </div>
@@ -224,7 +276,7 @@
                         <div class="footer-column">
                             <h4>Soporte</h4>
                             <a href="./">Documentación</a>
-                            <a href="../../privacy-policy.html">Política de privacidad</a>
+                            <a href="../../privacy-policy.html?lang=es">Política de privacidad</a>
                             <a href="mailto:tamersavasci@icloud.com">Contacto</a>
                         </div>
                     </div>

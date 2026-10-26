@@ -31,6 +31,18 @@ function initI18n() {
 
   const detectInitialLanguage = () => {
     try {
+      const urlLang = new URLSearchParams(window.location.search)
+        .get("lang")
+        ?.slice(0, 2)
+        .toLowerCase();
+      if (urlLang && codes.includes(urlLang)) {
+        return urlLang;
+      }
+    } catch (e) {
+      /* URLSearchParams unavailable */
+    }
+
+    try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved && codes.includes(saved)) {
         return saved;
@@ -130,6 +142,10 @@ function initI18n() {
       localStorage.setItem(STORAGE_KEY, meta.code);
     } catch (e) {
       /* localStorage unavailable */
+    }
+
+    if (typeof window.onBfLanguageChange === "function") {
+      window.onBfLanguageChange(meta.code, meta);
     }
   };
 

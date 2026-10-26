@@ -1,76 +1,47 @@
 #!/usr/bin/env python3
-"""Build the localized Help pages in docs/ from the plain website-docs source.
+# -*- coding: utf-8 -*-
+"""Build the localized Help pages in docs/ for all 12 supported languages.
 
 Usage:
-    python3 tools/build_docs.py [path/to/website-docs]
-
-The source folder contains one <lang>/index.html per language with a <header>
-and a series of <section> blocks. This script wraps that content in the site's
-navbar, table of contents and footer. Nav and footer labels come from
-translations.js so they always match the main page.
+    python3 tools/build_docs.py
 """
 
 import html
 import json
-import re
 import subprocess
-import sys
 from pathlib import Path
 
+from docs_data_1 import DOCS_PART_1
+from docs_data_2 import DOCS_PART_2
+
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "Documents/BackupFlow/website-docs"
 OUT = ROOT / "docs"
 SITE_URL = "https://tsavasci.github.io/BackupFlowWeb"
 
-# Stable anchors, in source section order (identical across languages).
-SECTION_IDS = [
-    "what-you-need",
-    "first-backup",
-    "automatic-backups",
-    "deleted-files",
-    "background",
-    "history",
-    "extra-protection",
-    "troubleshooting",
-    "privacy",
-    "help",
-]
+DOCS_DATA = {**DOCS_PART_1, **DOCS_PART_2}
 
-TOC_LABEL = {
-    "en": "On this page", "tr": "Bu sayfada", "de": "Auf dieser Seite", "fr": "Sur cette page",
-    "es": "En esta página", "ru": "На этой странице", "ar": "في هذه الصفحة", "zh": "本页内容",
-    "ko": "이 페이지에서", "ja": "このページの内容", "pt": "Nesta página", "hi": "इस पेज पर",
+SECTION_SCREENS = {
+    "backup-hub": ["1.jpg"],
+    "first-backup": ["6.jpg", "9.jpg"],
+    "task-details": ["5.jpg"],
+    "history": ["3.jpg"],
+    "settings": ["10.jpg"],
 }
 
 
 def load_site_strings():
-    """Read languages and labels from translations.js via Node."""
+    """Read languages and labels from translations.js using macOS JavaScriptCore or Node."""
+    jsc = "/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc"
+    js_path = (ROOT / "translations.js").as_posix()
     script = (
-        "global.window={};require('./translations.js');"
-        "const o={languages:window.BF_LANGUAGES,t:{}};"
-        "for(const l of window.BF_LANGUAGES){const t=window.BF_TRANSLATIONS[l.code];"
+        f"var window={{}}; load({json.dumps(js_path)});"
+        "var o={languages:window.BF_LANGUAGES,t:{}};"
+        "for(var i=0;i<window.BF_LANGUAGES.length;i++){var l=window.BF_LANGUAGES[i];var t=window.BF_TRANSLATIONS[l.code];"
         "o.t[l.code]={nav:t.nav,footer:t.footer,misc:t.misc};}"
-        "process.stdout.write(JSON.stringify(o));"
+        "print(JSON.stringify(o));"
     )
-    raw = subprocess.check_output(["node", "-e", script], cwd=ROOT)
-    return json.loads(raw)
-
-
-def parse_source(lang):
-    text = (SOURCE / lang / "index.html").read_text(encoding="utf-8")
-    title = re.search(r"<title>(.*?)</title>", text, re.S).group(1).strip()
-    description = re.search(r'<meta name="description" content="(.*?)">', text, re.S).group(1)
-    header = re.search(r"<header>(.*?)</header>", text, re.S).group(1)
-    h1 = re.search(r"<h1>(.*?)</h1>", header, re.S).group(1).strip()
-    lead = re.search(r'<p class="lead">(.*?)</p>', header, re.S).group(1).strip()
-    sections = re.findall(r"<section>(.*?)</section>", text, re.S)
-    if len(sections) != len(SECTION_IDS):
-        raise SystemExit(f"{lang}: expected {len(SECTION_IDS)} sections, found {len(sections)}")
-    parsed = []
-    for sid, body in zip(SECTION_IDS, sections):
-        m = re.search(r"<h2>(.*?)</h2>", body, re.S)
-        parsed.append((sid, m.group(1).strip(), body.strip()))
-    return title, description, h1, lead, parsed
+    raw = subprocess.check_output([jsc, "-e", script], cwd=ROOT)
+    return json.loads(raw.decode("utf-8").strip())
 
 
 def indent(block, spaces):
@@ -78,8 +49,29 @@ def indent(block, spaces):
     return "\n".join(pad + line if line.strip() else "" for line in block.splitlines())
 
 
+def render_screens(lang, sid, h2_title):
+    files = SECTION_SCREENS.get(sid)
+    if not files:
+        return ""
+    imgs = "\n".join(
+        f'                            <figure class="docs-screen-card">'
+        f'<img src="../../assets/screens/{lang}/{fname}" width="300" height="649" loading="lazy" decoding="async" alt="{html.escape(h2_title)}" />'
+        f"</figure>"
+        for fname in files
+    )
+    multi = " docs-screens-pair" if len(files) > 1 else ""
+    return f'\n                        <div class="docs-screens{multi}">\n{imgs}\n                        </div>'
+
+
 def render_page(lang, meta, strings, languages):
-    title, description, h1, lead, sections = parse_source(lang)
+    doc = DOCS_DATA[lang]
+    title = html.escape(doc["title"])
+    description = html.escape(doc["description"])
+    h1 = html.escape(doc["h1"])
+    lead = html.escape(doc["lead"])
+    toc_title = html.escape(doc["toc_title"])
+    sections = doc["sections"]
+
     nav, footer = strings["nav"], strings["footer"]
     home = "../../index.html"
 
@@ -99,12 +91,23 @@ def render_page(lang, meta, strings, languages):
         for l in languages
     )
     toc = "\n".join(
-        f'                        <li><a href="#{sid}">{h2}</a></li>' for sid, h2, _ in sections
+        f'                        <li><a href="#{sid}">{html.escape(h2)}</a></li>'
+        for sid, h2, _ in sections
     )
-    body = "\n\n".join(
-        f'                    <section id="{sid}" class="docs-section">\n{indent(content, 24)}\n                    </section>'
-        for sid, _, content in sections
-    )
+
+    rendered_sections = []
+    for sid, h2, content in sections:
+        screens_html = render_screens(lang, sid, h2)
+        section_html = (
+            f'                    <section id="{sid}" class="docs-section">\n'
+            f"                        <h2>{html.escape(h2)}</h2>\n"
+            f"{indent(content.strip(), 24)}"
+            f"{screens_html}\n"
+            f"                    </section>"
+        )
+        rendered_sections.append(section_html)
+
+    body = "\n\n".join(rendered_sections)
 
     return f"""<!doctype html>
 <html lang="{lang}" dir="{meta["dir"]}">
@@ -184,7 +187,7 @@ def render_page(lang, meta, strings, languages):
 
                 <div class="docs-layout">
                     <aside class="docs-toc" aria-labelledby="docs-toc-title">
-                        <p class="docs-toc-title" id="docs-toc-title">{TOC_LABEL[lang]}</p>
+                        <p class="docs-toc-title" id="docs-toc-title">{toc_title}</p>
                         <ol>
 {toc}
                         </ol>
@@ -213,7 +216,7 @@ def render_page(lang, meta, strings, languages):
                         <div class="footer-column">
                             <h4>{footer["supportHeading"]}</h4>
                             <a href="./">{footer["docs"]}</a>
-                            <a href="../../privacy-policy.html">{footer["privacy"]}</a>
+                            <a href="../../privacy-policy.html?lang={lang}">{footer["privacy"]}</a>
                             <a href="mailto:tamersavasci@icloud.com">{footer["contact"]}</a>
                         </div>
                     </div>

@@ -31,6 +31,42 @@
     max-width: 760px;
 }
 
+.docs-updated {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    margin-bottom: 0.65rem;
+}
+
+.docs-section h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.privacy-summary-card {
+    background: var(--brand-gradient);
+    color: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem 2.25rem;
+}
+
+.privacy-summary-card h2 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.65rem;
+}
+
+.privacy-summary-card p {
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
 /* Sidebar + content */
 .docs-layout {
     display: grid;
@@ -181,6 +217,31 @@
 
 .docs-section a {
     color: var(--brand-blue);
+}
+
+/* Inline app screenshot previews inside docs sections */
+.docs-screens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+}
+
+.docs-screen-card {
+    margin: 0;
+    max-width: 240px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-sm);
+    background: #f8fafc;
+}
+
+.docs-screen-card img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Language picker on docs/index.html */
