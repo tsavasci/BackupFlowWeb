@@ -20,7 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "Documents/BackupFlow/website-docs"
 OUT = ROOT / "docs"
-SITE_URL = "https://backupflow.netlify.app"
+SITE_URL = "https://tsavasci.github.io/BackupFlowWeb"
 
 # Stable anchors, in source section order (identical across languages).
 SECTION_IDS = [
