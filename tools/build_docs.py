@@ -117,6 +117,12 @@ def render_page(lang, meta, strings, languages):
         <title>{title}</title>
         <meta name="description" content="{description}" />
         <meta name="theme-color" content="#3B82F6" />
+        <meta name="apple-itunes-app" content="app-id=6753620051" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="{title}" />
+        <meta property="og:description" content="{description}" />
+        <meta property="og:url" content="{SITE_URL}/docs/{lang}/" />
+        <meta property="og:image" content="{SITE_URL}/assets/og-image.jpg" />
         <link rel="canonical" href="{SITE_URL}/docs/{lang}/" />
 {alternates}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

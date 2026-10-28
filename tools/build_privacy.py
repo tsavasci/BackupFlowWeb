@@ -56,6 +56,7 @@ def build_privacy_html():
         />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#3B82F6" />
+        <meta name="apple-itunes-app" content="app-id=6753620051" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
