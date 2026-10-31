@@ -28,7 +28,7 @@ window.BF_PRIVACY = {
       [
         "app-store-info",
         "4. App Store & System Information",
-        "<p>The only external information associated with the app is standard data processed by Apple through the App Store:</p>\n<ul>\n<li>App download and one-time purchase verification (processed entirely by Apple)</li>\n<li>Aggregated, anonymized crash logs or diagnostics (only if you have opted in to share diagnostics with app developers in iOS Settings)</li>\n<li>Public ratings and reviews you choose to post on the App Store</li>\n</ul>\n<p>This information is governed by Apple's Privacy Policy and cannot be used by us to identify you personally.</p>"
+        "<p>The only external information associated with the app is standard data processed by Apple through the App Store:</p>\n<ul>\n<li>App download, free-to-try usage, and optional In-App Purchase (BackupFlow Pro Lifetime) verification (processed entirely by Apple StoreKit)</li>\n<li>Aggregated, anonymized crash logs or diagnostics (only if you have opted in to share diagnostics with app developers in iOS Settings)</li>\n<li>Public ratings and reviews you choose to post on the App Store</li>\n</ul>\n<p>This information is governed by Apple's Privacy Policy and cannot be used by us to identify you personally.</p>"
       ],
       [
         "permissions",
@@ -100,7 +100,7 @@ window.BF_PRIVACY = {
       [
         "app-store-info",
         "4. App Store ve Sistem Bilgileri",
-        "<p>Uygulamayla ilişkili tek dış veri, Apple tarafından App Store üzerinden standart olarak yönetilen bilgilerdir:</p>\n<ul>\n<li>Uygulama indirme ve satın alma doğrulama bilgileri (tamamen Apple tarafından işlenir)</li>\n<li>Anonimleştirilmiş çökme raporları (yalnızca iOS ayarlarında geliştiricilerle paylaşmayı seçtiyseniz)</li>\n<li>App Store'da herkese açık olarak yazdığınız puan ve değerlendirmeler</li>\n</ul>\n<p>Bu bilgiler Apple'ın gizlilik politikasına tabidir ve bireysel kullanıcıları kimliklendirmek için tarafımızca kullanılamaz.</p>"
+        "<p>Uygulamayla ilişkili tek dış veri, Apple tarafından App Store üzerinden standart olarak yönetilen bilgilerdir:</p>\n<ul>\n<li>Uygulama indirme, ücretsiz deneme kullanımı ve isteğe bağlı uygulama içi satın alma (BackupFlow Pro Lifetime) doğrulama bilgileri (tamamen Apple StoreKit tarafından işlenir)</li>\n<li>Anonimleştirilmiş çökme raporları (yalnızca iOS ayarlarında geliştiricilerle paylaşmayı seçtiyseniz)</li>\n<li>App Store'da herkese açık olarak yazdığınız puan ve değerlendirmeler</li>\n</ul>\n<p>Bu bilgiler Apple'ın gizlilik politikasına tabidir ve bireysel kullanıcıları kimliklendirmek için tarafımızca kullanılamaz.</p>"
       ],
       [
         "permissions",
