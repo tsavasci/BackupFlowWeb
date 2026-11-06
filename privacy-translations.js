@@ -28,7 +28,7 @@ window.BF_PRIVACY = {
       [
         "app-store-info",
         "4. App Store & System Information",
-        "<p>The only external information associated with the app is standard data processed by Apple through the App Store:</p>\n<ul>\n<li>App download, free-to-try usage, and optional In-App Purchase (BackupFlow Pro Lifetime) verification (processed entirely by Apple StoreKit)</li>\n<li>Aggregated, anonymized crash logs or diagnostics (only if you have opted in to share diagnostics with app developers in iOS Settings)</li>\n<li>Public ratings and reviews you choose to post on the App Store</li>\n</ul>\n<p>This information is governed by Apple's Privacy Policy and cannot be used by us to identify you personally.</p>"
+        "<p>The only external information associated with the app is standard data processed by Apple through the App Store:</p>\n<ul>\n<li>App purchase and download verification (processed entirely by Apple App Store)</li>\n<li>Aggregated, anonymized crash logs or diagnostics (only if you have opted in to share diagnostics with app developers in iOS Settings)</li>\n<li>Public ratings and reviews you choose to post on the App Store</li>\n</ul>\n<p>This information is governed by Apple's Privacy Policy and cannot be used by us to identify you personally.</p>"
       ],
       [
         "permissions",

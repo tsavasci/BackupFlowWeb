@@ -46,7 +46,7 @@ PRIVACY_PART_1 = {
                 "4. App Store & System Information",
                 """<p>The only external information associated with the app is standard data processed by Apple through the App Store:</p>
 <ul>
-<li>App download, free-to-try usage, and optional In-App Purchase (BackupFlow Pro Lifetime) verification (processed entirely by Apple StoreKit)</li>
+<li>App purchase and download verification (processed entirely by Apple App Store)</li>
 <li>Aggregated, anonymized crash logs or diagnostics (only if you have opted in to share diagnostics with app developers in iOS Settings)</li>
 <li>Public ratings and reviews you choose to post on the App Store</li>
 </ul>
